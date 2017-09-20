@@ -1,3 +1,5 @@
+import { routerConfig } from './router.config';
+import { RouterModule } from '@angular/router';
 import { WordpressTestingComponent } from './components/wordpress-testing/wordpress-testing.component';
 import { ProjectService } from './services/Project.service';
 import { ProcessingService } from './services/Processing.service';
@@ -19,7 +21,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routerConfig),
   ],
   providers: [
     CategoryService,
