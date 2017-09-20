@@ -1,1 +1,1 @@
-web: npm run dist
+web: node app.js
