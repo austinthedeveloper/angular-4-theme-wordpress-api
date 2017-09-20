@@ -1,0 +1,38 @@
+$primary: 'Source Sans Pro', sans-serif;
+$preFont: lighter 12px/20px Monaco,'MonacoRegular', monospace;
+$base-weight: 300;
+
+// Colors
+$primaryColor: #b12527;
+$white: #ffffff;
+$black: #000000;
+$grey: #CCCCCC;
+
+$ilfusion: #EF4127;
+$drn: #364B58;
+$bcycle: #BB2133;
+$jaxzen: #00837D;
+$maxcdn: #F37021;
+$tmbbq: #77554F;
+
+$error: #ce4844;
+$warning: yellow;
+$success: green;
+
+$base-border: 1px solid $grey;
+
+$base-transition: .2s all ease-in-out;
+
+$break-small: 960px;
+
+.ilfusion-bg {
+	background: $ilfusion;
+}
+
+.drn-bg {
+	background: $drn;
+}
+
+/* .70kft-bg {
+	background: black;
+} */
