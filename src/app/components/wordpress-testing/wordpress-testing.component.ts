@@ -26,7 +26,9 @@ export class WordpressTestingComponent implements OnInit {
     private projectService: ProjectService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  getPosts() {
     // Get all posts
     this.postService.getAll()
     .subscribe(
@@ -35,7 +37,8 @@ export class WordpressTestingComponent implements OnInit {
         console.log('Something went wrong!', err);
       }
     );
-
+  }
+  getPost() {
     // Get a post
     this.postService.get('create-a-category-route')
     .subscribe(
@@ -44,7 +47,8 @@ export class WordpressTestingComponent implements OnInit {
         console.log('Something went wrong!', err);
       }
     );
-
+  }
+  getCategory() {
     // Get a category
     this.categoryService.get('angular-wordpress-theme')
     .subscribe(
@@ -53,7 +57,8 @@ export class WordpressTestingComponent implements OnInit {
         console.log('Something went wrong!', err);
       }
     );
-
+  }
+  getPage() {
     // Get a page
     this.pageService.get('286')
     .subscribe(
@@ -62,7 +67,8 @@ export class WordpressTestingComponent implements OnInit {
         console.log('Something went wrong!', err);
       }
     );
-
+  }
+  getProject() {
     // Get a project
     this.projectService.get()
     .subscribe(
@@ -71,7 +77,8 @@ export class WordpressTestingComponent implements OnInit {
         console.log('Something went wrong!', err);
       }
     );
-
+  }
+  getProjects() {
     // Get projects
     this.projectService.getAll()
     .subscribe(
@@ -80,7 +87,6 @@ export class WordpressTestingComponent implements OnInit {
         console.log('Something went wrong!', err);
       }
     );
-
   }
 
 
