@@ -9,7 +9,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dist": "http-server ./dist"
+    "dist": "http-server ./dist",
+    "postinstall": "ng build -prod"
+  },
+  "engines": {
+    "node": "~8.5.0",
+    "npm": "~5.3.0"
   },
   "private": true,
   "dependencies": {
@@ -22,14 +27,14 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "@angular/cli": "^1.4.2",
+    "@angular/compiler-cli": "^4.2.4",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14",
     "http-server": "^0.10.0"
   },
   "devDependencies": {
-    "@angular/cli": "^1.4.2",
-    "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
     "@types/jasmine": "~2.5.53",
     "@types/jasminewd2": "~2.0.2",
