@@ -1,0 +1,8 @@
+<article class="exerpt" *ngFor="let post of posts">
+  <h2 class="post-title">{{post.title.rendered}}</h2>
+  <h4 class="post-date">{{post.date | date:'mediumDate'}}</h4>
+    <div [innerHtml]="post.excerpt.rendered"></div>
+  <div layout="row" layout-align="end center">
+    <button class="md-raised md-primary read-more">Read More</button>
+  </div>
+</article>

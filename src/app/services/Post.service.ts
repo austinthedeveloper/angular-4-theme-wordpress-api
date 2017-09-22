@@ -11,13 +11,13 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  get(slug: string): Observable<any> {
-    slug = slug || '';
+  get(slug: string = ''): Observable<any> {
     const params = {
       params: new HttpParams().set('slug', slug)
     };
     return this.http
-      .get<any>(`${this.url}`, params);
+      .get<any>(`${this.url}`, params)
+      .map(x => x[0]);
   }
 
   getAll(): Observable<any> {

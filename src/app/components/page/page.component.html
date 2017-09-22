@@ -1,0 +1,4 @@
+<article *ngIf="page">
+  <h1 class="page-title">{{page.title.rendered}}</h1>
+  <div [innerHtml]="page.content.rendered"></div>
+</article>

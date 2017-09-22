@@ -1,3 +1,6 @@
+import { PostsComponent } from './components/posts/posts.component';
+import { PostComponent } from './components/post/post.component';
+import { PageComponent } from './components/page/page.component';
 import { routerConfig } from './router.config';
 import { RouterModule } from '@angular/router';
 import { WordpressTestingComponent } from './components/wordpress-testing/wordpress-testing.component';
@@ -17,6 +20,9 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
+    PageComponent,
+    PostComponent,
+    PostsComponent,
     WordpressTestingComponent
   ],
   imports: [

@@ -1,0 +1,7 @@
+<article *ngIf="post">
+  <h1 class="page-title">{{post.title.rendered}}</h1>
+  <div class="post-image" *ngIf="post.better_featured_image">
+    <img [src]="post.better_featured_image.source_url">
+  </div>
+  <div [innerHtml]="post.content.rendered"></div>
+</article>

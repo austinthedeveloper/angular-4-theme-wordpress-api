@@ -1,12 +1,16 @@
 <h1>Data</h1>
 <h3>Posts (showing first) <button (click)="getPosts()">Load</button></h3>
-<pre>{{posts[0] | json}}</pre>
+<app-posts [posts]="posts"></app-posts>
+<!-- <pre>{{posts[0] | json}}</pre> -->
 <h3>Single Post <button (click)="getPost()">Load</button></h3>
+<app-post [post]="post"></app-post>
 <pre>{{post | json}}</pre>
 <h3>Categories (showing first) <button (click)="getCategory()">Load</button></h3>
 <pre>{{categories[0] | json}}</pre>
 <h3>Page <button (click)="getPage()">Load</button></h3>
 <pre>{{page | json}}</pre>
+<h3>Page Component</h3>
+<app-page id="285"></app-page>
 <h3>Project <button (click)="getProject()">Load</button></h3>
 <pre>{{project | json}}</pre>
 <h3>Projects <button (click)="getProjects()">Load</button></h3>
