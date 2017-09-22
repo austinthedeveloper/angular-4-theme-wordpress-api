@@ -1,0 +1,9 @@
+<div *ngFor="let issue of issues">
+  <div class="github-status">
+    {{statusIcon(issue.state)}}
+  </div>
+  <div class="github-content">
+    <h3>{{issue.state}} - {{issue.title}}</h3>
+    <h4>{{ issue.created_at | date:'mediumDate' }}</h4>
+  </div>
+</div>

@@ -25,7 +25,7 @@ export class GithubService {
             url: item.repo.url,
             type: item.type,
             repo: item.repo,
-            message: 'Pushed ' + item.payload.size + ' ' + items,
+            message: `Pushed ${item.payload.size} ${items}`,
             date: item.created_at
           };
           return obj;

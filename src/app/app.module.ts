@@ -1,3 +1,5 @@
+import { GithubService } from './services/github.service';
+import { GithubComponent } from './components/github/github.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
 import { PageComponent } from './components/page/page.component';
@@ -20,6 +22,7 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
+    GithubComponent,
     PageComponent,
     PostComponent,
     PostsComponent,
@@ -33,6 +36,7 @@ import { AppComponent } from './app.component';
   providers: [
     CategoryService,
     CompanyService,
+    GithubService,
     MenuService,
     PageService,
     PostService,
