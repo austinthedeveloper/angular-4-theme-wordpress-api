@@ -1,3 +1,5 @@
+import { SocialItem } from './social-item';
+import { MenuItem } from './menu-item';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main-sidenav.component.html',
   styleUrls: ['./main-sidenav.component.scss']
 })
+
 export class MainSidenavComponent implements OnInit {
 
-  menu = [
-    {name: 'Home', link: 'main', icon: ''},
+  menu: MenuItem[] = [
+    {name: 'Home', link: 'about', icon: ''},
     {name: 'Awards', link: 'awards', icon: ''},
     {name: 'Resume', link: 'resume', icon: ''},
     {name: 'Blog', link: 'blog', icon: ''},
@@ -17,7 +20,7 @@ export class MainSidenavComponent implements OnInit {
     {name: 'About the Site', link: 'aboutSite', icon: ''}
   ];
 
-  social = [
+  social: SocialItem[] = [
     {
       name: 'LinkedIn',
       link: 'https://www.linkedin.com/in/austinstewart',

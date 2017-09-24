@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -9,9 +10,12 @@ export class PostComponent implements OnInit {
   @Input()
   'post': any;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    if (this.route.snapshot.data['detail']) {
+      this.post = this.route.snapshot.data['detail'];
+    }
   }
 
 }

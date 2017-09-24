@@ -3,6 +3,6 @@
   <h4 class="post-date">{{post.date | date:'mediumDate'}}</h4>
     <div [innerHtml]="post.excerpt.rendered"></div>
   <div layout="row" layout-align="end center">
-    <button class="md-raised md-primary read-more">Read More</button>
+    <button class="md-raised md-primary read-more" [routerLink]="['/post', post.slug]">Read More</button>
   </div>
 </article>

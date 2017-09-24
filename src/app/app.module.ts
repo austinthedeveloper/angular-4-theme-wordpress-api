@@ -1,5 +1,15 @@
+import { BlogResolver } from './components/blog/blog.resolver';
+import { PostResolver } from './components/post/post.resolver';
+import { AwardsResolver } from './resolvers/awards.resolver';
+import { AboutResolver } from './resolvers/about.resolver';
+import { ResumeComponent } from './components/resume/resume.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectComponent } from './components/project/project.component';
+import { MainComponent } from './components/main/main.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { CategoryComponent } from './components/category/category.component';
+import { BlogComponent } from './components/blog/blog.component';
 import { MainSidenavComponent } from './components/main-sidenav/main-sidenav.component';
-import { KeysPipe } from './pipes/keys.pipe';
 import { GithubService } from './services/github.service';
 import { GithubComponent } from './components/github/github.component';
 import { PostsComponent } from './components/posts/posts.component';
@@ -35,7 +45,13 @@ import { AppComponent } from './app.component';
     PostsComponent,
     WordpressTestingComponent,
     MainSidenavComponent,
-    KeysPipe
+    BlogComponent,
+    CategoryComponent,
+    ContactComponent,
+    MainComponent,
+    ProjectComponent,
+    ProjectsComponent,
+    ResumeComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +68,11 @@ import { AppComponent } from './app.component';
     PageService,
     PostService,
     ProcessingService,
-    ProjectService
+    ProjectService,
+    AboutResolver,
+    AwardsResolver,
+    PostResolver,
+    BlogResolver
   ],
   bootstrap: [AppComponent]
 })

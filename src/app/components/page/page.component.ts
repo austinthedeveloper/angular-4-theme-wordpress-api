@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs/Observable';
 import { PageService } from './../../services/Page.service';
+import {Resolve, ActivatedRoute, RouterStateSnapshot} from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -10,12 +12,22 @@ export class PageComponent implements OnInit {
   @Input()
   'id';
 
-  public page;
+  @Input()
+  'data';
 
-  constructor(private pageService: PageService) { }
+  public page;
+  resolveData;
+
+  constructor(private pageService: PageService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getPage(this.id);
+    this.resolveData = this.route.snapshot.data['detail'];
+
+    if (this.data || this.resolveData) {
+      this.page = this.data || this.resolveData;
+    } else if (this.id) {
+      this.getPage(this.id);
+    }
   }
 
   getPage(id: string = '') {
