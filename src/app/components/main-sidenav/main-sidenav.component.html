@@ -1,0 +1,16 @@
+<div class="header-title" flex="none">
+  <h1>Austin Stewart</h1>
+  <h2>Web Developer</h2>
+</div>
+<div>
+  <ul class="menu">
+    <li *ngFor="let item of menu">
+      <a [routerLink]="item.link">{{item.name}}</a>
+    </li>
+  </ul>
+</div>
+<div class="menu-social">
+  <a class="social-icon" *ngFor="let item of social" [attr.href]="item.link" target="_new">
+    <i class="fa" [ngClass]="item.icon" [mdTooltip]="item.name" mdTooltipPosition="right"></i>
+  </a>
+</div>

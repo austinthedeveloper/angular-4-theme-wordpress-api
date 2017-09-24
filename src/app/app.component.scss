@@ -1,0 +1,17 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+.main-sidenav {
+  width: 250px;
+  background: $primaryColor;
+  @include gradient(darken($primaryColor, 5%), $primaryColor, vertical);
+  color: $white;
+}
+.main-container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  padding: 20px;
+}

@@ -1,1 +1,8 @@
-<router-outlet></router-outlet>
+<md-sidenav-container class="main-container">
+  <md-sidenav class="main-sidenav" #sidenav mode="side" opened="true">
+    <app-main-sidenav></app-main-sidenav>
+  </md-sidenav>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>

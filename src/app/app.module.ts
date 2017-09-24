@@ -1,3 +1,5 @@
+import { MainSidenavComponent } from './components/main-sidenav/main-sidenav.component';
+import { KeysPipe } from './pipes/keys.pipe';
 import { GithubService } from './services/github.service';
 import { GithubComponent } from './components/github/github.component';
 import { PostsComponent } from './components/posts/posts.component';
@@ -16,6 +18,11 @@ import { MenuService } from './services/Menu.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+// material design imports
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+import { MdModules } from './../Material-Design.module';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
 
@@ -26,12 +33,16 @@ import { AppComponent } from './app.component';
     PageComponent,
     PostComponent,
     PostsComponent,
-    WordpressTestingComponent
+    WordpressTestingComponent,
+    MainSidenavComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routerConfig),
+    BrowserAnimationsModule,
+    MdModules
   ],
   providers: [
     CategoryService,
