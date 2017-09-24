@@ -2,10 +2,13 @@
   <md-sidenav class="main-sidenav" #sidenav mode="side" opened="true">
     <app-main-sidenav></app-main-sidenav>
   </md-sidenav>
-  <div class="content-container">
-      <div class="main-content">
-        <app-processing></app-processing>
-        <router-outlet></router-outlet>
-      </div>
+  <div class="processing-wrap" [ngClass]="{'processing-freeze': (processing$ | async)}">
+    <app-processing></app-processing>
+    <div class="content-container">
+        <div class="main-content">
+
+          <router-outlet></router-outlet>
+        </div>
+    </div>
   </div>
 </md-sidenav-container>

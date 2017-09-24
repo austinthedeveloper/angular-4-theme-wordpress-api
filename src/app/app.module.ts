@@ -74,7 +74,8 @@ import { AppComponent } from './app.component';
     AboutResolver,
     AwardsResolver,
     PostResolver,
-    BlogResolver
+    BlogResolver,
+    ProcessingService
   ],
   bootstrap: [AppComponent]
 })

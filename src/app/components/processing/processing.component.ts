@@ -1,3 +1,4 @@
+import { ProcessingService } from './../../services/Processing.service';
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {NavigationStart, ResolveStart, Router, RoutesRecognized} from '@angular/router';
@@ -12,7 +13,8 @@ export class ProcessingComponent implements OnInit {
 
   processing$: Observable<boolean>;
 
-    constructor(private router: Router) {
+    constructor(private router: Router,
+      private processingService: ProcessingService) {
 
 
     }
@@ -23,6 +25,12 @@ export class ProcessingComponent implements OnInit {
         .map(event => event instanceof NavigationStart ||
         event instanceof RoutesRecognized ||
         event instanceof ResolveStart);
+
+      this.processingService.changePages()
+      .subscribe(res => {
+        //Find a way to move the above process to a service
+        // console.log('res', res);
+      });
 
 
     }
