@@ -1,3 +1,4 @@
+import { ProcessingComponent } from './components/processing/processing.component';
 import { BlogResolver } from './components/blog/blog.resolver';
 import { PostResolver } from './components/post/post.resolver';
 import { AwardsResolver } from './resolvers/awards.resolver';
@@ -51,7 +52,8 @@ import { AppComponent } from './app.component';
     MainComponent,
     ProjectComponent,
     ProjectsComponent,
-    ResumeComponent
+    ResumeComponent,
+    ProcessingComponent
   ],
   imports: [
     BrowserModule,
