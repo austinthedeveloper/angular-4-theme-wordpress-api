@@ -1,6 +1,8 @@
-# NgBase
+# Austin Stewart Portfolio: Angular 4 Edition
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+- This is an Angular 4 application of `http://austinthedeveloper.com`.
+- It uses the Wordpress API located on the main site
+- The site is then deployed to Heroku and built on the server, found at `http://shielded-citadel-17193.herokuapp.com/`.
 
 ## Development server
 
