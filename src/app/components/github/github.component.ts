@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { GithubService } from './../../services/github.service';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -7,12 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./github.component.scss']
 })
 export class GithubComponent implements OnInit {
-  issues: any;
+  issues: any = this.route.snapshot.data['issues'];
 
-  constructor(private githubService: GithubService) { }
+  constructor(private githubService: GithubService,
+    private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.github();
+    if (!this.issues) {
+      this.github();
+    }
   }
 
   github(user: string = 'austinthedeveloper', repo: string = 'Angular-Wordpress-Theme') {

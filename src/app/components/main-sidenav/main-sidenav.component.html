@@ -9,8 +9,4 @@
     </li>
   </ul>
 </div>
-<div class="menu-social">
-  <a class="social-icon" *ngFor="let item of social" [attr.href]="item.link" target="_new">
-    <i class="fa" [ngClass]="item.icon" [mdTooltip]="item.name" mdTooltipPosition="right"></i>
-  </a>
-</div>
+<app-social-menu [items]="social"></app-social-menu>

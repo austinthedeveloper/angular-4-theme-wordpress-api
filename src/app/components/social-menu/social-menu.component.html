@@ -1,0 +1,5 @@
+<div class="row no-gutter menu-social" *ngIf="items">
+  <a class="social-icon col" *ngFor="let item of items" [attr.href]="item.link" target="_new">
+    <i class="fa" [ngClass]="item.icon" [mdTooltip]="item.name" mdTooltipPosition="right"></i>
+  </a>
+</div>

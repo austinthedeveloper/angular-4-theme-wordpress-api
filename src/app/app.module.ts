@@ -1,5 +1,7 @@
+import { SocialMenuComponent } from './components/social-menu/social-menu.component';
+import { CapitalizePipe } from './pipes/Capitalize.pipe';
 import { AboutTheSiteComponent } from './components/about-the-site/about-the-site.component';
-import { AboutTheSiteResolver } from './components/about-the-site/about-the-site.resolver';
+import { AboutTheSiteResolver, GithubIssueResolver } from './components/about-the-site/about-the-site.resolver';
 import { ContactResolver } from './components/contact/contact.resolver';
 import { ProjectResolver } from './components/project/project.resolver';
 import { ProjectsResolver } from './components/projects/projects.resolver';
@@ -62,7 +64,9 @@ import { AppComponent } from './app.component';
     ResumeComponent,
     ResumeCardComponent,
     ProcessingComponent,
-    AboutTheSiteComponent
+    AboutTheSiteComponent,
+    CapitalizePipe,
+    SocialMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +93,7 @@ import { AppComponent } from './app.component';
     ProjectsResolver,
     ContactResolver,
     AboutTheSiteResolver,
+    GithubIssueResolver,
     ProcessingService
   ],
   bootstrap: [AppComponent]

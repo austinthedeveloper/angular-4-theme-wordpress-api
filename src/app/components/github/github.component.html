@@ -1,9 +1,10 @@
-<div *ngFor="let issue of issues">
-  <div class="github-status">
-    {{statusIcon(issue.state)}}
+<div *ngFor="let issue of issues" class="git-list-item row no-gutter"
+[ngClass]="status(issue.state)">
+  <div class="github-status col-1">
+    <i class="fa" [ngClass]="statusIcon(issue.state)"></i>
   </div>
-  <div class="github-content">
-    <h3>{{issue.state}} - {{issue.title}}</h3>
+  <div class="github-content col">
+    <h3>{{issue.state | Capitalize}} - {{issue.title}}</h3>
     <h4>{{ issue.created_at | date:'mediumDate' }}</h4>
   </div>
 </div>

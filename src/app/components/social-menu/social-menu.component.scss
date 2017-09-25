@@ -1,0 +1,25 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+.menu-social {
+  margin: 0;
+  a {
+		display: inline-block;
+		padding: 10px;
+		@include transition($base-transition);
+		&:hover {
+			background: lighten($primaryColor, 5%);
+		}
+	}
+	i {
+		$icon-size: 40px;
+		font-size: $icon-size;
+		height: $icon-size;
+		color: $white;
+		@media screen and (max-width: $break-small) {
+			$icon-size: 30px;
+			font-size: $icon-size;
+			height: $icon-size;
+		}
+	}
+}

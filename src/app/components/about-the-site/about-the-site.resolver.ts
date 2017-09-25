@@ -1,3 +1,4 @@
+import { GithubService } from './../../services/github.service';
 import { PageService } from './../../services/Page.service';
 import {Resolve, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
 import {Injectable} from '@angular/core';
@@ -13,6 +14,18 @@ export class AboutTheSiteResolver implements Resolve<any> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<any> {
     return this.pageService.get('286');
+  }
+
+}
+@Injectable()
+export class GithubIssueResolver implements Resolve<any> {
+
+  constructor(private githubService: GithubService) {}
+
+  resolve(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<any> {
+    return this.githubService.getIssues('austinthedeveloper', 'Angular-Wordpress-Theme');
   }
 
 }
