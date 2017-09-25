@@ -8,7 +8,7 @@
   <md-card-content *ngIf="post.excerpt" [innerHtml]="post.excerpt.rendered">
   </md-card-content>
   <md-card-actions layout="row" layout-align="end center">
-    <button md-raised-button *ngIf="post.acf.project_url" [attr.href]="post.acf.project_url" target="_new">View Site</button>
-    <button md-raised-button *ngIf="post.acf.gallery || post.content.rendered">See More</button>
+    <a md-raised-button *ngIf="post.acf.project_url" [href]="post.acf.project_url" target="_new">View Site</a>
+    <a md-raised-button *ngIf="post.acf.gallery || post.content.rendered">See More</a>
   </md-card-actions>
 </md-card>

@@ -1,9 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic);
-
 @import 'scss/variables';
 @import 'scss/mixins';
+
+// Material Design Theme
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+// Bootstrap grid import
+@import "~bootstrap/scss/bootstrap-grid";
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic);
+
+
 @import 'scss/pre';
 @import 'scss/awards';
 @import 'scss/wordpress';

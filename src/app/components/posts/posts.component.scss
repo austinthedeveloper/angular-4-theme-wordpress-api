@@ -1,0 +1,29 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+
+article {
+  border-bottom: $base-border;
+  padding: 15px 10px;
+  &:last-child {
+    border-bottom: none;
+  }
+  &.exerpt {
+    cursor: pointer;
+    @include transition($base-transition);
+    &:hover {
+      background: darken($white, 3%);
+    }
+  }
+  .post-image {
+    overflow: hidden;
+  }
+  .post-title {
+    line-height: 1.3em;
+    margin: 10px 0;
+  }
+
+  .post-date {
+    text-align: right;
+    font-size: 17px;
+  }
+}
