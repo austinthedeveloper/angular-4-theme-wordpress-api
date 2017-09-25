@@ -17,7 +17,7 @@ export class MainSidenavComponent implements OnInit {
     {name: 'Blog', link: 'blog', icon: ''},
     {name: 'Projects', link: 'projects', icon: ''},
     {name: 'Contact', link: 'contact', icon: ''},
-    {name: 'About the Site', link: 'aboutSite', icon: ''}
+    {name: 'About the Site', link: 'about-the-site', icon: ''}
   ];
 
   social: SocialItem[] = [

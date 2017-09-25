@@ -1,3 +1,14 @@
-<p>
-  projects works!
-</p>
+<md-card *ngFor="let post of projects" flex="45">
+  <img [src]="post.better_featured_image.media_details.sizes.medium.source_url"
+  class="md-card-image" [attr.alt]="post.title.rendered">
+  <md-card-title>
+      <span class="md-headline">{{post.title.rendered}}</span>
+      <span class="md-subhead text-right">Project Date: {{post.acf.project_date | date:'mediumDate'}}</span>
+  </md-card-title>
+  <md-card-content *ngIf="post.excerpt" [innerHtml]="post.excerpt.rendered">
+  </md-card-content>
+  <md-card-actions layout="row" layout-align="end center">
+    <button md-raised-button *ngIf="post.acf.project_url" [attr.href]="post.acf.project_url" target="_new">View Site</button>
+    <button md-raised-button *ngIf="post.acf.gallery || post.content.rendered">See More</button>
+  </md-card-actions>
+</md-card>

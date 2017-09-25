@@ -21,7 +21,7 @@ export class PageComponent implements OnInit {
   constructor(private pageService: PageService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    if (this.data) {
+    if (this.data && !this.id) {
       this.page = this.data;
     } else if (this.id) {
       this.getPage(this.id);

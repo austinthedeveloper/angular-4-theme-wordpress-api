@@ -1,3 +1,9 @@
+import { AboutTheSiteResolver } from './components/about-the-site/about-the-site.resolver';
+import { AboutTheSiteComponent } from './components/about-the-site/about-the-site.component';
+import { ContactResolver } from './components/contact/contact.resolver';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProjectResolver } from './components/project/project.resolver';
+import { ProjectsResolver } from './components/projects/projects.resolver';
 import { ResumeResolver } from './components/resume/resume.resolver';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectComponent } from './components/project/project.component';
@@ -55,11 +61,31 @@ export const routerConfig: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsComponent
+    component: ProjectsComponent,
+    resolve: {
+      detail: ProjectsResolver
+    }
   },
   {
     path: 'projects/:id',
-    component: ProjectComponent
+    component: ProjectComponent,
+    resolve: {
+      detail: ProjectResolver
+    }
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    resolve: {
+      detail: ContactResolver
+    }
+  },
+  {
+    path: 'about-the-site',
+    component: AboutTheSiteComponent,
+    resolve: {
+      detail: AboutTheSiteResolver
+    }
   },
   {
     path: 'wordpress',

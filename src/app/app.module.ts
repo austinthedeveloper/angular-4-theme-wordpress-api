@@ -1,3 +1,8 @@
+import { AboutTheSiteComponent } from './components/about-the-site/about-the-site.component';
+import { AboutTheSiteResolver } from './components/about-the-site/about-the-site.resolver';
+import { ContactResolver } from './components/contact/contact.resolver';
+import { ProjectResolver } from './components/project/project.resolver';
+import { ProjectsResolver } from './components/projects/projects.resolver';
 import { ResumeResolver } from './components/resume/resume.resolver';
 import { ResumeCardComponent } from './components/resume-card/resume-card.component';
 import { ProcessingComponent } from './components/processing/processing.component';
@@ -56,7 +61,8 @@ import { AppComponent } from './app.component';
     ProjectsComponent,
     ResumeComponent,
     ResumeCardComponent,
-    ProcessingComponent
+    ProcessingComponent,
+    AboutTheSiteComponent
   ],
   imports: [
     BrowserModule,
@@ -79,6 +85,10 @@ import { AppComponent } from './app.component';
     PostResolver,
     BlogResolver,
     ResumeResolver,
+    ProjectResolver,
+    ProjectsResolver,
+    ContactResolver,
+    AboutTheSiteResolver,
     ProcessingService
   ],
   bootstrap: [AppComponent]
