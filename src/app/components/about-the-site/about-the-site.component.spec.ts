@@ -1,3 +1,5 @@
+import { PageComponent } from './../page/page.component';
+import { GithubComponent } from './../github/github.component';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -11,7 +13,10 @@ describe('AboutTheSiteComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutTheSiteComponent ]
+      declarations: [ AboutTheSiteComponent,
+        GithubComponent,
+        PageComponent
+      ]
     })
     .compileComponents();
   }));
