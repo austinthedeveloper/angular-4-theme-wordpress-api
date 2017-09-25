@@ -13,7 +13,7 @@ export class AboutTheSiteResolver implements Resolve<any> {
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<any> {
-    return this.pageService.get('286');
+    return this.pageService.get('428');
   }
 
 }
@@ -25,7 +25,7 @@ export class GithubIssueResolver implements Resolve<any> {
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<any> {
-    return this.githubService.getIssues('austinthedeveloper', 'Angular-Wordpress-Theme');
+    return this.githubService.getIssues('austinthedeveloper', 'angular-4-theme-wordpress-api');
   }
 
 }

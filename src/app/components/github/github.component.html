@@ -8,3 +8,6 @@
     <h4>{{ issue.created_at | date:'mediumDate' }}</h4>
   </div>
 </div>
+<div *ngIf="!issues.length">
+  <h2>There are currently no issues.</h2>
+</div>

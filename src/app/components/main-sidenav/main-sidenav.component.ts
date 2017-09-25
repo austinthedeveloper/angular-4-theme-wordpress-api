@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
 export class MainSidenavComponent implements OnInit {
 
   menu: MenuItem[] = [
-    {name: 'Home', link: 'about', icon: ''},
     {name: 'Awards', link: 'awards', icon: ''},
     {name: 'Resume', link: 'resume', icon: ''},
     {name: 'Blog', link: 'blog', icon: ''},

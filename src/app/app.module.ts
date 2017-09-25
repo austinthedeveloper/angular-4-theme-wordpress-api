@@ -1,3 +1,4 @@
+import { MainResolver } from './components/main/main.resolver';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SocialMenuComponent } from './components/social-menu/social-menu.component';
 import { CapitalizePipe } from './pipes/Capitalize.pipe';
@@ -96,6 +97,7 @@ import { AppComponent } from './app.component';
     ContactResolver,
     AboutTheSiteResolver,
     GithubIssueResolver,
+    MainResolver,
     ProcessingService
   ],
   bootstrap: [AppComponent]

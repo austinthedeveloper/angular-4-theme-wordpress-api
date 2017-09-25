@@ -1,3 +1,4 @@
+import { MainResolver } from './components/main/main.resolver';
 import { AboutTheSiteResolver, GithubIssueResolver } from './components/about-the-site/about-the-site.resolver';
 import { AboutTheSiteComponent } from './components/about-the-site/about-the-site.component';
 import { ContactResolver } from './components/contact/contact.resolver';
@@ -22,7 +23,10 @@ import {Routes} from '@angular/router';
 export const routerConfig: Routes = [
   {
     path: '',
-    component: MainComponent
+    component: MainComponent,
+    resolve: {
+      detail: MainResolver
+    }
   },
   {
     path: 'about',

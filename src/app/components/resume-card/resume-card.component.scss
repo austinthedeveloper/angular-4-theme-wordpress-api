@@ -21,14 +21,17 @@ $card-height: 300px;
 		padding: 15px;
 	}
 	.card-content {
-		max-height: 550px;
+    max-height: 550px;
+    padding: 0;
 	}
 	.card-title {
-		position: relative;
+    position: relative;
+    padding-left: 20px;
 		z-index: 2;
 	}
 	.card-meta {
-		font-size: 15px;
+    font-size: 15px;
+    padding-left: 20px;
 		font-style: italic;
 	}
 	.card-details {
