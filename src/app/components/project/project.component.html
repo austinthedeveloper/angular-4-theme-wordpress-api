@@ -1,3 +1,15 @@
-<p>
-  project works!
-</p>
+<div class="single-navigation">
+  <a md-button routerLink="/projects">Back to Projects</a>
+</div>
+
+<article *ngIf="post">
+  <h1 class="page-title">{{post.title.rendered}}</h1>
+  <div class="post-image" *ngIf="post.better_featured_image">
+    <img [src]="post.better_featured_image.source_url">
+  </div>
+  <div [innerHtml]="post.content.rendered"></div>
+  <div class="post-image" *ngIf="post.acf.gallery">
+    <h2>Additional Assets</h2>
+    <div [innerHtml]="post.acf.gallery"></div>
+  </div>
+</article>

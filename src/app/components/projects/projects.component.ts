@@ -7,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects: any[];
+  projects: any[] = this.route.snapshot.data['detail'];
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.projects = this.route.snapshot.data['detail'];
   }
 
 }

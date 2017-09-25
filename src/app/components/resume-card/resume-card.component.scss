@@ -7,6 +7,7 @@ $card-height: 300px;
 	margin: auto auto 25px;
   min-height: $card-height;
   padding: 0;
+  border: 1px solid #CCC;
 	.logo {
 		width: 150px;
 		text-align: center;
@@ -30,15 +31,20 @@ $card-height: 300px;
 		font-size: 15px;
 		font-style: italic;
 	}
-	md-content {
+	.card-details {
 		font-size: 15px;
-		padding: 8px;
+    padding: 8px;
+    max-height: 350px;
+    overflow-y: auto;
 		ul {
-			padding-left: 20px;
+      padding-left: 20px;
 		}
 	}
 	.card-actions {
-		md-icon {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+		i {
 			color: $white;
 		}
 	}

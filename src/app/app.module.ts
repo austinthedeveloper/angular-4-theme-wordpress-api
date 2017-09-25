@@ -1,3 +1,4 @@
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { SocialMenuComponent } from './components/social-menu/social-menu.component';
 import { CapitalizePipe } from './pipes/Capitalize.pipe';
 import { AboutTheSiteComponent } from './components/about-the-site/about-the-site.component';
@@ -66,6 +67,7 @@ import { AppComponent } from './app.component';
     ProcessingComponent,
     AboutTheSiteComponent,
     CapitalizePipe,
+    NavigationComponent,
     SocialMenuComponent
   ],
   imports: [

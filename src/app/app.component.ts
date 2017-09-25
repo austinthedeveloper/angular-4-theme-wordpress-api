@@ -1,7 +1,7 @@
 import { MenuService } from './services/Menu.service';
 import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {NavigationStart, ResolveStart, Router, RoutesRecognized} from '@angular/router';
+import { NavigationStart, ResolveStart, Router, RoutesRecognized, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +11,9 @@ import {NavigationStart, ResolveStart, Router, RoutesRecognized} from '@angular/
 export class AppComponent implements OnInit {
 
   processing$: Observable<boolean>;
+  private fragment: string;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.processing$ = this.router.events

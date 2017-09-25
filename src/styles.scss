@@ -41,3 +41,56 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $primary;
 	font-weight: $base-weight;
 }
+
+.main-sidenav {
+  width: 320px;
+  background: $primaryColor;
+  @include gradient(darken($primaryColor, 5%), $primaryColor, vertical);
+  color: $white;
+}
+.main-container {
+  height: 100%;
+  overflow: hidden;
+}
+.processing-wrap {
+  height: 100%;
+  overflow: hidden;
+}
+
+.content-container {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.main-content {
+	width: 95%;
+	max-width: 700px;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	font-size: 20px;
+  line-height: 1.8;
+  &.processing-freeze {
+    overflow: hidden;
+  }
+	a:not(.mat-primary) {
+		text-decoration: none;
+		color: $primaryColor;
+		&:visited, &:focus {
+			color: darken($primaryColor, 20%);
+		}
+		&:hover {
+			color: lighten($primaryColor, 20%);
+		}
+	}
+	.page-title {
+		font-weight: bold;
+		font-size: 1.8em;
+		line-height: 1.5em;
+		margin: 10px 0;
+		@media screen and (max-width: $break-small) {
+			font-size: 1.5em;
+			line-height: 1.3em;
+		}
+	}
+}

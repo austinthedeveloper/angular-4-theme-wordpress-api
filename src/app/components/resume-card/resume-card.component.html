@@ -1,5 +1,5 @@
-<md-card class="card" *ngIf="data">
-  <div class="logo" [style.background]="data.acf.color">
+<div class="card row no-gutter" *ngIf="data">
+  <div class="logo col-4" [style.background]="data.acf.color">
     <a [attr.href]="data.acf.site || '#'" *ngIf="data.better_featured_image">
       <img [src]="data.better_featured_image.source_url" [attr.alt]="data.title.rendered">
     </a>
@@ -10,7 +10,7 @@
       </a>
     </div>
   </div>
-  <div class="card-content">
+  <div class="card-content col">
     <md-card-title class="card-title">
       <span class="md-headline">{{data.acf.alternate_company_name || data.title.rendered}}</span>
       <div class="card-meta">
@@ -19,6 +19,6 @@
         <div class="card-date">{{data.acf.start_date}} - {{data.acf.end_date || 'Present'}}</div>
       </div>
     </md-card-title>
-    <div [innerHtml]="data.content.rendered"></div>
+    <div class="card-details" [innerHtml]="data.content.rendered"></div>
   </div>
-</md-card>
+</div>

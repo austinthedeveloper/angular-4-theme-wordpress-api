@@ -1,12 +1,7 @@
 <div class="header-title" flex="none">
   <h1>Austin Stewart</h1>
-  <h2>Web Developer</h2>
+  <h2>UI Developer</h2>
 </div>
-<div>
-  <ul class="menu">
-    <li *ngFor="let item of menu">
-      <a [routerLink]="item.link">{{item.name}}</a>
-    </li>
-  </ul>
-</div>
+
+<app-navigation [items]="menu"></app-navigation>
 <app-social-menu [items]="social"></app-social-menu>

@@ -2,6 +2,7 @@ import { WORDPRESS_URL } from './../shared/api';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ProjectService {
@@ -15,7 +16,8 @@ export class ProjectService {
       params: new HttpParams().set('slug', slug)
     };
     return this.http
-      .get<any>(`${this.url}`, params);
+      .get<any>(`${this.url}`, params)
+      .map((x) => x[0]);
   }
 
   getAll(): Observable<any> {
