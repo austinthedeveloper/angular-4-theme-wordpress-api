@@ -10,7 +10,7 @@ export class CompanyService {
 
   constructor(private http: HttpClient) { }
 
-  get(id: string): Observable<any> {
+  get(id: string = ''): Observable<any> {
     return this.http
       .get<any>(`${this.url}${id}`);
   }

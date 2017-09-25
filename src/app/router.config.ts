@@ -1,3 +1,4 @@
+import { ResumeResolver } from './components/resume/resume.resolver';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectComponent } from './components/project/project.component';
 import { BlogResolver } from './components/blog/blog.resolver';
@@ -33,7 +34,10 @@ export const routerConfig: Routes = [
   },
   {
     path: 'resume',
-    component: ResumeComponent
+    component: ResumeComponent,
+    resolve: {
+      detail: ResumeResolver
+    }
   },
   {
     path: 'blog',

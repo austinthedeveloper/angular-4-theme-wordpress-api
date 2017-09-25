@@ -13,7 +13,7 @@ export class PageComponent implements OnInit {
   'id';
 
   @Input()
-  'data';
+  'data' = this.route.snapshot.data['detail'];
 
   public page;
   resolveData;
@@ -21,10 +21,8 @@ export class PageComponent implements OnInit {
   constructor(private pageService: PageService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.resolveData = this.route.snapshot.data['detail'];
-
-    if (this.data || this.resolveData) {
-      this.page = this.data || this.resolveData;
+    if (this.data) {
+      this.page = this.data;
     } else if (this.id) {
       this.getPage(this.id);
     }

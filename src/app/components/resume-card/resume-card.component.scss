@@ -1,0 +1,49 @@
+@import '~scss/variables';
+@import '~scss/mixins';
+$card-height: 300px;
+
+.card {
+	width: 95%;
+	margin: auto auto 25px;
+  min-height: $card-height;
+  padding: 0;
+	.logo {
+		width: 150px;
+		text-align: center;
+		padding: 25px 15px 15px;
+		img {
+			width: auto;
+			margin: auto;
+		}
+	}
+	.content {
+		padding: 15px;
+	}
+	.card-content {
+		max-height: 550px;
+	}
+	.card-title {
+		position: relative;
+		z-index: 2;
+	}
+	.card-meta {
+		font-size: 15px;
+		font-style: italic;
+	}
+	md-content {
+		font-size: 15px;
+		padding: 8px;
+		ul {
+			padding-left: 20px;
+		}
+	}
+	.card-actions {
+		md-icon {
+			color: $white;
+		}
+	}
+}
+
+.div-hover {
+	@include transition($base-transition);
+}

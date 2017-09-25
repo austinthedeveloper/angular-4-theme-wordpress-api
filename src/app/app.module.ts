@@ -1,3 +1,5 @@
+import { ResumeResolver } from './components/resume/resume.resolver';
+import { ResumeCardComponent } from './components/resume-card/resume-card.component';
 import { ProcessingComponent } from './components/processing/processing.component';
 import { BlogResolver } from './components/blog/blog.resolver';
 import { PostResolver } from './components/post/post.resolver';
@@ -53,6 +55,7 @@ import { AppComponent } from './app.component';
     ProjectComponent,
     ProjectsComponent,
     ResumeComponent,
+    ResumeCardComponent,
     ProcessingComponent
   ],
   imports: [
@@ -75,6 +78,7 @@ import { AppComponent } from './app.component';
     AwardsResolver,
     PostResolver,
     BlogResolver,
+    ResumeResolver,
     ProcessingService
   ],
   bootstrap: [AppComponent]

@@ -1,0 +1,24 @@
+<md-card class="card" *ngIf="data">
+  <div class="logo" [style.background]="data.acf.color">
+    <a [attr.href]="data.acf.site || '#'" *ngIf="data.better_featured_image">
+      <img [src]="data.better_featured_image.source_url" [attr.alt]="data.title.rendered">
+    </a>
+    <span flex></span>
+    <div class="card-actions">
+      <a class="social-icon" target="_new" [href]="data.acf.site || '#'" *ngIf="data.acf.site">
+        <i class="fa fa-mail-forward" mdTooltip="View Site" mdTooltipPosition="right"></i>
+      </a>
+    </div>
+  </div>
+  <div class="card-content">
+    <md-card-title class="card-title">
+      <span class="md-headline">{{data.acf.alternate_company_name || data.title.rendered}}</span>
+      <div class="card-meta">
+        <div class="card-location">{{data.acf.location}}</div>
+        <div class="card-position">{{data.acf.position}}</div>
+        <div class="card-date">{{data.acf.start_date}} - {{data.acf.end_date || 'Present'}}</div>
+      </div>
+    </md-card-title>
+    <div [innerHtml]="data.content.rendered"></div>
+  </div>
+</md-card>
