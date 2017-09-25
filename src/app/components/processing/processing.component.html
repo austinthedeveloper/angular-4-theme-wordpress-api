@@ -1,5 +1,7 @@
 <div class="processing-indicator" *ngIf="processing$ | async">
   <div class="processing-icon-container">
-    <i class='fa fa-spinner fa-spin processing-icon'></i>
+      <md-progress-spinner
+          mode="indeterminate">
+      </md-progress-spinner>
   </div>
 </div>

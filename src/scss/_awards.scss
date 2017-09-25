@@ -1,0 +1,8 @@
+.award {
+	text-align: center;
+	border-bottom: $base-border;
+	padding: 15px 10px;
+	&:last-child {
+		border-bottom: none;
+	}
+}

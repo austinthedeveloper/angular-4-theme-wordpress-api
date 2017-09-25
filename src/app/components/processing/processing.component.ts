@@ -28,7 +28,7 @@ export class ProcessingComponent implements OnInit {
 
       this.processingService.changePages()
       .subscribe(res => {
-        //Find a way to move the above process to a service
+        // Find a way to move the above process to a service
         // console.log('res', res);
       });
 
