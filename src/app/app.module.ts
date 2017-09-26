@@ -1,3 +1,5 @@
+import { ModulesComponent } from './components/modules/modules.component';
+import { TruncatePipesModule } from 'angular-truncate-pipes';
 import { CountToModule } from 'angular-count-to';
 import { TestingComponent } from './components/testing/testing.component';
 import { MainResolver } from './components/main/main.resolver';
@@ -72,7 +74,8 @@ import { AppComponent } from './app.component';
     CapitalizePipe,
     NavigationComponent,
     SocialMenuComponent,
-    TestingComponent
+    TestingComponent,
+    ModulesComponent
   ],
   imports: [
     BrowserModule,
@@ -80,7 +83,8 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot(routerConfig),
     BrowserAnimationsModule,
     MdModules,
-    CountToModule
+    CountToModule,
+    TruncatePipesModule
   ],
   providers: [
     CategoryService,
