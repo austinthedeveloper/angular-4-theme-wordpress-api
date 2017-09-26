@@ -1,3 +1,4 @@
+import { TestingComponent } from './components/testing/testing.component';
 import { MainResolver } from './components/main/main.resolver';
 import { AboutTheSiteResolver, GithubIssueResolver } from './components/about-the-site/about-the-site.resolver';
 import { AboutTheSiteComponent } from './components/about-the-site/about-the-site.component';
@@ -95,6 +96,10 @@ export const routerConfig: Routes = [
   {
     path: 'wordpress',
     component: WordpressTestingComponent
+  },
+  {
+    path: 'testing',
+    component: TestingComponent
   },
   {
     path: '**',

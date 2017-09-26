@@ -1,3 +1,5 @@
+import { TestingComponent } from './components/testing/testing.component';
+import { CountToDirective } from './directives/count-to.directive';
 import { MainResolver } from './components/main/main.resolver';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SocialMenuComponent } from './components/social-menu/social-menu.component';
@@ -69,7 +71,9 @@ import { AppComponent } from './app.component';
     AboutTheSiteComponent,
     CapitalizePipe,
     NavigationComponent,
-    SocialMenuComponent
+    SocialMenuComponent,
+    CountToDirective,
+    TestingComponent
   ],
   imports: [
     BrowserModule,
