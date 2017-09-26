@@ -1,5 +1,5 @@
+import { CountToModule } from 'angular-count-to';
 import { TestingComponent } from './components/testing/testing.component';
-import { CountToDirective } from './directives/count-to.directive';
 import { MainResolver } from './components/main/main.resolver';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SocialMenuComponent } from './components/social-menu/social-menu.component';
@@ -72,7 +72,6 @@ import { AppComponent } from './app.component';
     CapitalizePipe,
     NavigationComponent,
     SocialMenuComponent,
-    CountToDirective,
     TestingComponent
   ],
   imports: [
@@ -80,7 +79,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     RouterModule.forRoot(routerConfig),
     BrowserAnimationsModule,
-    MdModules
+    MdModules,
+    CountToModule
   ],
   providers: [
     CategoryService,
