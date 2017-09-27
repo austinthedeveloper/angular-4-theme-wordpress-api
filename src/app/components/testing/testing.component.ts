@@ -6,12 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testing.component.scss']
 })
 export class TestingComponent implements OnInit {
-  activeCount = {};
-  count = {
-    count: 100,
-    from: 0,
-    duration: 1
-  };
 
   constructor() { }
 

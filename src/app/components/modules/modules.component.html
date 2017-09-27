@@ -1,7 +1,7 @@
 <h1>Modules</h1>
 
 <h2>Count-To</h2>
-<button md-button (click)="activeCount = count">Click to start</button>
+<button md-button (click)="activeCount.count = 100">Click to start</button>
 <span [CountTo]="activeCount.count" [from]="activeCount.from" [duration]="activeCount.duration"></span>
 
 <hr>

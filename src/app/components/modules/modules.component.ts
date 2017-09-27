@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModulesComponent implements OnInit {
 
-  activeCount = {};
-  count = {
-    count: 100,
+  activeCount = {
+    count: 0,
     from: 0,
     duration: 1
   };
+
   truncateWord = 'Austin The Developer Writes Code';
 
   constructor() { }
