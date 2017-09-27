@@ -1,3 +1,4 @@
+import { GithubProjectComponent } from './components/github-project/github-project.component';
 import { ModulesComponent } from './components/modules/modules.component';
 import { TruncatePipesModule } from 'angular-truncate-pipes';
 import { CountToModule } from 'angular-count-to';
@@ -75,7 +76,8 @@ import { AppComponent } from './app.component';
     NavigationComponent,
     SocialMenuComponent,
     TestingComponent,
-    ModulesComponent
+    ModulesComponent,
+    GithubProjectComponent
   ],
   imports: [
     BrowserModule,

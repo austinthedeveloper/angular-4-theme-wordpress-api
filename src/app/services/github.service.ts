@@ -44,4 +44,14 @@ export class GithubService {
       .get<any>(`${url}`, params);
   }
 
+  getRepo(user: any, repo: any): Observable<any> {
+    const url = `${this.gitUrl}repos/${user}/${repo}`;
+
+    /* const params = {
+      params: new HttpParams().set('state', 'all')
+    }; */
+    return this.http
+      .get<any>(`${url}`);
+  }
+
 }

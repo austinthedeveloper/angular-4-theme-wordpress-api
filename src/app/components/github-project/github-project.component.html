@@ -1,0 +1,14 @@
+<div class="github-project" *ngIf="data">
+  <div class="row no-gutter">
+    <div class="col-2">
+      <img [src]="data.owner.avatar_url">
+    </div>
+    <div class="col">
+      <p>{{data.name}}</p>
+      <p><a [href]="data.html_url" target="_new">Project URL</a></p>
+      <p>Created: {{data.created_at | date:'medium'}}</p>
+      <p>Updated: {{data.updated_at | date:'medium'}}</p>
+      <p>Last Push: {{data.pushed_at | date:'medium'}}</p>
+    </div>
+  </div>
+</div>
