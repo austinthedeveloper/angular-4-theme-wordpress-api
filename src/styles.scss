@@ -6,7 +6,14 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 // Bootstrap grid import
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+
 @import "~bootstrap/scss/bootstrap-grid";
+
+@import "~bootstrap/scss/tables";
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic);
 
