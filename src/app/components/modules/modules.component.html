@@ -8,11 +8,20 @@
 
 <hr>
 
+<h2>Angular 1 Portfolio</h2>
+<p>The Repo for the AngularJS/Wordpress site. This is still used for the Angular 4 site because of the added REST API features.</p>
+<app-github-project project="Angular-Wordpress-Theme"></app-github-project>
+
+<hr>
+
 <h2>Count-To</h2>
 <p>Counts from a number to another number over a set time.</p>
-<app-github-project project="angular-truncate-pipes"></app-github-project>
-<button md-button (click)="activeCount.count = 100">Click to start</button>
-<span [CountTo]="activeCount.count" [from]="activeCount.from" [duration]="activeCount.duration"></span>
+<app-github-project project="angular-count-to"></app-github-project>
+<h3>Demo</h3>
+<div class="Row">
+  <button md-button (click)="activeCount.count = 100">Click to start</button>
+  <span [CountTo]="activeCount.count" [from]="activeCount.from" [duration]="activeCount.duration"></span>
+</div>
 <hr>
 
 <h2>Truncate Pipes</h2>

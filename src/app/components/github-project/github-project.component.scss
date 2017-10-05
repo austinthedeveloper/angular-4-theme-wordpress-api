@@ -1,7 +1,21 @@
 .github-project {
   border: 1px solid #CCC;
   margin-bottom: 20px;
-  p {
-    margin-bottom: 0;
+  .github-project-avatar {
+    border-right: 1px solid #CCC;
   }
+  .github-project-content {
+    padding-left: 30px;
+    .github-project-title {
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    b {
+      font-weight: 600;
+    }
+  }
+
 }
