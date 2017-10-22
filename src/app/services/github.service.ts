@@ -47,9 +47,12 @@ export class GithubService {
   getRepo(user: any, repo: any): Observable<any> {
     const url = `${this.gitUrl}repos/${user}/${repo}`;
 
-    /* const params = {
-      params: new HttpParams().set('state', 'all')
-    }; */
+    return this.http
+      .get<any>(`${url}`);
+  }
+
+  getFile(file: string, user: any, repo: any): Observable<any> {
+    const url = `${this.gitUrl}repos/${user}/${repo}/contents/${file}`;
     return this.http
       .get<any>(`${url}`);
   }

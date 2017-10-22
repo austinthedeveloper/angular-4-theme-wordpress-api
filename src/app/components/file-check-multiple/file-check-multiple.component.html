@@ -1,0 +1,4 @@
+<div *ngIf="items" class="file-check-multiple">
+  <h2>Files Used</h2>
+  <app-file-check class="file-check-wrapper" *ngFor="let item of items" [file]="item"></app-file-check>
+</div>

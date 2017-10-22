@@ -1,0 +1,12 @@
+@import '~scss/variables';
+
+.file-check-multiple {
+  .file-check-wrapper {
+    display: block;
+    padding: 10px 5px;
+    &:nth-child(odd) {
+      border-top: $base-border;
+      background: $light-grey;
+    }
+  }
+}

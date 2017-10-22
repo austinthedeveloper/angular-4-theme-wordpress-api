@@ -17,6 +17,12 @@ export class PageComponent implements OnInit {
 
   public page;
   resolveData;
+  pageUrl = 'src/app/components/page/';
+  files = [
+    `${this.pageUrl}page.component.ts`,
+    `${this.pageUrl}page.resolver.ts`,
+    `src/app/services/Page.service.ts`
+  ];
 
   constructor(private pageService: PageService, private route: ActivatedRoute) { }
 

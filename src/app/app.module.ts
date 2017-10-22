@@ -1,3 +1,4 @@
+import { FileCheckMultipleComponent } from './components/file-check-multiple/file-check-multiple.component';
 import { GithubProjectComponent } from './components/github-project/github-project.component';
 import { ModulesComponent } from './components/modules/modules.component';
 import { TruncatePipesModule } from 'angular-truncate-pipes';
@@ -52,6 +53,7 @@ import { MdModules } from './../Material-Design.module';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+import { FileCheckComponent } from './components/file-check/file-check.component';
 
 @NgModule({
   declarations: [
@@ -77,8 +79,10 @@ import { AppComponent } from './app.component';
     SocialMenuComponent,
     TestingComponent,
     ModulesComponent,
-    GithubProjectComponent
-  ],
+    GithubProjectComponent,
+    FileCheckComponent,
+    FileCheckMultipleComponent
+],
   imports: [
     BrowserModule,
     HttpClientModule,
