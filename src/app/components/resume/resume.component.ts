@@ -13,8 +13,8 @@ export class ResumeComponent implements OnInit {
   files = [
     `${this.resumeUrl}resume.component.ts`,
     `${this.resumeUrl}resume.resolver.ts`,
-    // `${this.resumeUrl}resume.component.html`,
-    // `${this.resumeCardUrl}resume-card.component.html`,
+    `${this.resumeUrl}resume.component.html`,
+    `${this.resumeCardUrl}resume-card.component.html`,
     `${this.resumeCardUrl}resume-card.component.scss`
   ];
 
