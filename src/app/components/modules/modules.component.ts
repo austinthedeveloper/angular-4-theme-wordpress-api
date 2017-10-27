@@ -1,3 +1,4 @@
+import { RetroService } from './../../services/Retro.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -15,8 +16,17 @@ export class ModulesComponent implements OnInit {
 
   truncateWord = 'Austin The Developer Writes Code';
 
-  constructor() { }
+  constructor(private retroService: RetroService) { }
 
   ngOnInit() {
+    this.getUser();
+  }
+
+  getUser(user: string = 'foleykoontz') {
+    this.retroService.getUserRankAndScore(user)
+    .subscribe(
+      (res) => console.log,
+      (err) => console.log
+    );
   }
 }

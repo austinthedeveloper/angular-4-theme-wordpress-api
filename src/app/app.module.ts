@@ -1,3 +1,4 @@
+import { RetroService } from './services/Retro.service';
 import { FileCheckMultipleComponent } from './components/file-check-multiple/file-check-multiple.component';
 import { GithubProjectComponent } from './components/github-project/github-project.component';
 import { ModulesComponent } from './components/modules/modules.component';
@@ -112,7 +113,7 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     AboutTheSiteResolver,
     GithubIssueResolver,
     MainResolver,
-    ProcessingService
+    RetroService
   ],
   bootstrap: [AppComponent]
 })
