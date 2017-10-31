@@ -1,0 +1,27 @@
+<!-- <div *ngFor="let game of data">
+  <h2>{{game.Title}}</h2>
+  <h3>{{game.ConsoleName}}</h3>
+  <img [src]="game.ImageIcon">
+  <h4>{{game.LastPlayed | date}}</h4>
+  <h4>{{game.checkDate | date}}</h4>
+</div> -->
+<table class="table table-bordered table-striped">
+  <thead>
+    <th>User</th>
+    <th>Points</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of data">
+      <td>{{user[1]}}</td>
+      <td>{{user[2]}}</td>
+      <td>{{user[3]}}</td>
+      <td>
+        <a md-raised-button color="primary" class="read-more" [routerLink]="['/retro/user/', user[1]]">View</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<pre>{{data | json}}</pre>

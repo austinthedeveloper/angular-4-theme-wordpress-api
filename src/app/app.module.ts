@@ -1,3 +1,6 @@
+import { RetroUserDetailsComponent } from './components/retro-user-details/retro-user-details.component';
+import { RetroResolver, RetroUsersResolver, RetroUserResolver } from './components/retro/retro.resolver';
+import { RetroComponent } from './components/retro/retro.component';
 import { RetroService } from './services/Retro.service';
 import { FileCheckMultipleComponent } from './components/file-check-multiple/file-check-multiple.component';
 import { GithubProjectComponent } from './components/github-project/github-project.component';
@@ -82,7 +85,9 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     ModulesComponent,
     GithubProjectComponent,
     FileCheckComponent,
-    FileCheckMultipleComponent
+    FileCheckMultipleComponent,
+    RetroComponent,
+    RetroUserDetailsComponent
 ],
   imports: [
     BrowserModule,
@@ -113,7 +118,10 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     AboutTheSiteResolver,
     GithubIssueResolver,
     MainResolver,
-    RetroService
+    RetroService,
+    RetroResolver,
+    RetroUsersResolver,
+    RetroUserResolver
   ],
   bootstrap: [AppComponent]
 })

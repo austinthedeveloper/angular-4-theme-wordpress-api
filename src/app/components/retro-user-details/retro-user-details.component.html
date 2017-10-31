@@ -1,0 +1,15 @@
+<article>
+  <h1 class="page-title">User Details: {{data.LastActivity.User}}</h1>
+  <md-card *ngFor="let game of data.RecentlyPlayed" class="game-card">
+    <md-card-title>
+      <span class="md-headline">{{game.Title}}</span>
+      <span class="md-subhead">{{game.ConsoleName}}</span>
+    </md-card-title>
+    <h3>Achievements <button md-raised-button color="primary" (click)="game.toggleAch = !game.toggleAch">View</button></h3>
+    <div *ngIf="game.achievements && game.toggleAch" class="retro-achievements clearfix">
+      <div *ngFor="let ach of game.achievements" class="achievement" [mdTooltip]="ach.Title">
+        <img [src]="ach.BadgeName" [alt]="ach.Description">
+      </div>
+    </div>
+  </md-card>
+</article>

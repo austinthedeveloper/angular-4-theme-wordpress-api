@@ -25,7 +25,9 @@ export class ModulesComponent implements OnInit {
   getUser(user: string = 'foleykoontz') {
     this.retroService.getUserRankAndScore(user)
     .subscribe(
-      (res) => console.log,
+      (res) => {
+        console.log('hit', res);
+      },
       (err) => console.log
     );
   }

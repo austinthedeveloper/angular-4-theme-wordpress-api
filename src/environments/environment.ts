@@ -6,5 +6,6 @@
 export const environment = {
   production: false,
   GApiKey: 'OTkyMTlkNWQzM2RlNDJmNTY5ZDA0MGMyNGM5YzhlOGQxZWNjMDA3Yw==',
-  RetroApiKey: 'Ynk4R2liVmh6WUZPSHBuMXpZbVVxVDE5Z1BXSzV4WTc='
+  RetroApiKey: 'Ynk4R2liVmh6WUZPSHBuMXpZbVVxVDE5Z1BXSzV4WTc=',
+  nodeServer: 'http://localhost:8080/api/'
 };

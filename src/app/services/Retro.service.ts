@@ -7,25 +7,39 @@ import * as _ from 'lodash';
 
 @Injectable()
 export class RetroService {
-  private retroUrl = 'http://retroachievements.org/API/';
-  private key = atob(environment.RetroApiKey);
-  private user = 'foleykoontz';
-  private params: HttpParams = new HttpParams().set('z', this.user).set('y', this.key)
-  private data = {
-    params: this.params
-  };
+  private retroUrl = `${environment.nodeServer}retro/`;
+  private defaultUser = 'foleykoontz';
 
   constructor(private http: HttpClient) { }
 
-  getUserRankAndScore(user: any): Observable<any> {
-    const url = `${this.retroUrl}API_GetUserRankAndScore.php`;
-
-    console.log('params', this.params);
-    this.params.append('u', user);
-    console.log('params', this.params);
-
+  getTop10(): Observable<any> {
+    const url = `${this.retroUrl}users`;
     return this.http
-      .get<any>(`${url}`, this.data);
+      .get<any>(`${url}`);
+  }
+
+  getUserRankAndScore(user: string = this.defaultUser): Observable<any> {
+    const url = `${this.retroUrl}user/${user}`;
+    return this.http
+      .get<any>(`${url}`);
+  }
+
+  getUserFeed(user: string = this.defaultUser): Observable<any> {
+    const url = `${this.retroUrl}user/${user}/feed`;
+    return this.http
+      .get<any>(`${url}`);
+  }
+
+  getUserSummary(user: string = this.defaultUser): Observable<any> {
+    const url = `${this.retroUrl}user/${user}/summary`;
+    return this.http
+      .get<any>(`${url}`);
+  }
+
+  getRecentlyPlayed(user: string = this.defaultUser): Observable<any> {
+    const url = `${this.retroUrl}user/${user}/recent`;
+    return this.http
+      .get<any>(`${url}`);
   }
 
 }
