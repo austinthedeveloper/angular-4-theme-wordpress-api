@@ -5,10 +5,20 @@
       <span class="md-headline">{{game.Title}}</span>
       <span class="md-subhead">{{game.ConsoleName}}</span>
     </md-card-title>
-    <h3>Achievements <button md-raised-button color="primary" (click)="game.toggleAch = !game.toggleAch">View</button></h3>
-    <div *ngIf="game.achievements && game.toggleAch" class="retro-achievements clearfix">
-      <div *ngFor="let ach of game.achievements" class="achievement" [mdTooltip]="ach.Title">
-        <img [src]="ach.BadgeName" [alt]="ach.Description">
+    <div *ngIf="game.achievements" class="retro-achievements clearfix">
+      <h3>Achievements ({{game.achievements[1].length}} / {{game.achievementLength}})
+        <button md-raised-button color="primary" (click)="game.toggleAch = !game.toggleAch">View</button>
+      </h3>
+      <md-progress-bar mode="determinate" [value]="(game.achievements[1].length / game.achievementLength) * 100"></md-progress-bar>
+      <div *ngIf="game.toggleAch">
+        <div class="clearfix">
+          <h3>Locked ({{game.achievements[0].length}})</h3>
+          <app-retro-achievements [items]="game.achievements[0]"></app-retro-achievements>
+        </div>
+        <div class="clearfix">
+          <h3>Unlocked ({{game.achievements[1].length}})</h3>
+          <app-retro-achievements [items]="game.achievements[1]"></app-retro-achievements>
+        </div>
       </div>
     </div>
   </md-card>

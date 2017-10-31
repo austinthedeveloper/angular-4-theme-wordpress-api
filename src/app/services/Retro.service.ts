@@ -36,6 +36,12 @@ export class RetroService {
       .get<any>(`${url}`);
   }
 
+  getUserGameProgress(user: string = this.defaultUser, game: string): Observable<any> {
+    const url = `${this.retroUrl}user/${user}/game/${game}`;
+    return this.http
+      .get<any>(`${url}`);
+  }
+
   getRecentlyPlayed(user: string = this.defaultUser): Observable<any> {
     const url = `${this.retroUrl}user/${user}/recent`;
     return this.http

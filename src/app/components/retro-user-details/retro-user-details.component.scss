@@ -1,13 +1,11 @@
 .game-card {
+  margin-bottom: 15px;
+  .md-headline {}
+  .md-subhead {
+    display: block;
+  }
 
 }
 .retro-achievements {
-  .achievement {
-    float: left;
-    padding: 5px;
-    img {
-      width: 64px;
-      height: 64px;
-    }
-  }
+
 }

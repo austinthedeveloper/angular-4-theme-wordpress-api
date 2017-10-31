@@ -1,9 +1,9 @@
-import {MatButtonModule, MdCheckboxModule, MatSidenavModule,
-  MatTooltipModule, MatCardModule, MatProgressSpinnerModule} from '@angular/material';
+import {MatToolbarModule, MatButtonModule, MdCheckboxModule, MatSidenavModule,
+  MatTooltipModule, MatCardModule, MatProgressSpinnerModule, MatProgressBarModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
 @NgModule({
-  imports: [MatButtonModule, MatSidenavModule, MatTooltipModule, MatCardModule, MatProgressSpinnerModule],
-  exports: [MatButtonModule, MatSidenavModule, MatTooltipModule, MatCardModule, MatProgressSpinnerModule],
+  imports: [MatToolbarModule, MatButtonModule, MatSidenavModule, MatTooltipModule, MatCardModule, MatProgressSpinnerModule, MatProgressBarModule],
+  exports: [MatToolbarModule, MatButtonModule, MatSidenavModule, MatTooltipModule, MatCardModule, MatProgressSpinnerModule, MatProgressBarModule],
 })
 export class MdModules { }

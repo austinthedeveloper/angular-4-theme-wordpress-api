@@ -1,5 +1,8 @@
+import { RetroGameProgressComponent } from './components/retro-game-progress/retro-game-progress.component';
+import { RetroAchievementsComponent } from './components/retro-achievements/retro-achievements.component';
+import { LimitToPipe } from './pipes/limitTo.pipe';
 import { RetroUserDetailsComponent } from './components/retro-user-details/retro-user-details.component';
-import { RetroResolver, RetroUsersResolver, RetroUserResolver } from './components/retro/retro.resolver';
+import { RetroResolver, RetroUsersResolver, RetroUserResolver, RetroGameProgressResolver } from './components/retro/retro.resolver';
 import { RetroComponent } from './components/retro/retro.component';
 import { RetroService } from './services/Retro.service';
 import { FileCheckMultipleComponent } from './components/file-check-multiple/file-check-multiple.component';
@@ -79,6 +82,7 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     ProcessingComponent,
     AboutTheSiteComponent,
     CapitalizePipe,
+    LimitToPipe,
     NavigationComponent,
     SocialMenuComponent,
     TestingComponent,
@@ -87,7 +91,9 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     FileCheckComponent,
     FileCheckMultipleComponent,
     RetroComponent,
-    RetroUserDetailsComponent
+    RetroUserDetailsComponent,
+    RetroAchievementsComponent,
+    RetroGameProgressComponent
 ],
   imports: [
     BrowserModule,
@@ -121,7 +127,8 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     RetroService,
     RetroResolver,
     RetroUsersResolver,
-    RetroUserResolver
+    RetroUserResolver,
+    RetroGameProgressResolver
   ],
   bootstrap: [AppComponent]
 })

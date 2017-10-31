@@ -6,39 +6,40 @@ import 'rxjs/add/operator/switchMap';
 
 @Injectable()
 export class RetroUsersResolver implements Resolve<any> {
-
   constructor(private retroService: RetroService) { }
-
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<any> {
     return this.retroService.getTop10();
   }
-
 }
 
 @Injectable()
 export class RetroUserResolver implements Resolve<any> {
-
   constructor(private retroService: RetroService) { }
-
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<any> {
     return this.retroService.getUserSummary(route.params['user']);
   }
+}
 
+@Injectable()
+export class RetroGameProgressResolver implements Resolve<any> {
+  constructor(private retroService: RetroService) { }
+  resolve(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<any> {
+    return this.retroService.getUserGameProgress(route.params['user'], route.params['game']);
+  }
 }
 
 @Injectable()
 export class RetroResolver implements Resolve<any> {
-
   constructor(private retroService: RetroService) { }
-
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<any> {
     return this.retroService.getRecentlyPlayed('foleykoontz');
   }
-
 }
