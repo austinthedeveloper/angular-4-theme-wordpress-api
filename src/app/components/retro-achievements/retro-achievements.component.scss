@@ -1,9 +1,23 @@
+$size: 64px;
+
 .achievement {
   float: left;
   padding: 5px;
   img {
-    width: 64px;
-    height: 64px;
+    width: $size;
+    height: $size;
     background: #CCC;
   }
+
 }
+.see-more-achievements {
+  width: $size;
+  height: $size;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+

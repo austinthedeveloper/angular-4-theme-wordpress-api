@@ -2,7 +2,7 @@ import { RetroGameProgressComponent } from './components/retro-game-progress/ret
 import { RetroAchievementsComponent } from './components/retro-achievements/retro-achievements.component';
 import { LimitToPipe } from './pipes/limitTo.pipe';
 import { RetroUserDetailsComponent } from './components/retro-user-details/retro-user-details.component';
-import { RetroResolver, RetroUsersResolver, RetroUserResolver, RetroGameProgressResolver } from './components/retro/retro.resolver';
+import { RetroResolver, RetroUsersResolver, RetroUserResolver, RetroGameProgressResolver, RetroPersonalResolver } from './components/retro/retro.resolver';
 import { RetroComponent } from './components/retro/retro.component';
 import { RetroService } from './services/Retro.service';
 import { FileCheckMultipleComponent } from './components/file-check-multiple/file-check-multiple.component';
@@ -128,7 +128,8 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     RetroResolver,
     RetroUsersResolver,
     RetroUserResolver,
-    RetroGameProgressResolver
+    RetroGameProgressResolver,
+    RetroPersonalResolver
   ],
   bootstrap: [AppComponent]
 })

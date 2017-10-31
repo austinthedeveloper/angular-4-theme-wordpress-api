@@ -1,6 +1,6 @@
 import { RetroGameProgressComponent } from './components/retro-game-progress/retro-game-progress.component';
 import { RetroUserDetailsComponent } from './components/retro-user-details/retro-user-details.component';
-import { RetroResolver, RetroUsersResolver, RetroUserResolver, RetroGameProgressResolver } from './components/retro/retro.resolver';
+import { RetroResolver, RetroUsersResolver, RetroUserResolver, RetroGameProgressResolver, RetroPersonalResolver } from './components/retro/retro.resolver';
 import { RetroComponent } from './components/retro/retro.component';
 import { ModulesComponent } from './components/modules/modules.component';
 import { TestingComponent } from './components/testing/testing.component';
@@ -114,7 +114,8 @@ export const routerConfig: Routes = [
     path: 'retro',
     component: RetroComponent,
     resolve: {
-      detail: RetroUsersResolver
+      detail: RetroUsersResolver,
+      personal: RetroPersonalResolver
     }
   },
   {

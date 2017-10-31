@@ -15,6 +15,16 @@ export class RetroUsersResolver implements Resolve<any> {
 }
 
 @Injectable()
+export class RetroPersonalResolver implements Resolve<any> {
+  constructor(private retroService: RetroService) { }
+  resolve(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<any> {
+    return this.retroService.getUserRankAndScore('foleykoontz');
+  }
+}
+
+@Injectable()
 export class RetroUserResolver implements Resolve<any> {
   constructor(private retroService: RetroService) { }
   resolve(

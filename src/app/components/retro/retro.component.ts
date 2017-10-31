@@ -10,6 +10,8 @@ export class RetroComponent implements OnInit {
 
   @Input()
   'data' = this.route.snapshot.data['detail'];
+  @Input()
+  'personal' = this.route.snapshot.data['personal'];
 
   constructor(private route: ActivatedRoute) { }
 
