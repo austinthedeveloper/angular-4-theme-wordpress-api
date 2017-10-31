@@ -1,0 +1,8 @@
+<div class="clearfix" *ngIf="items">
+  <div *ngFor="let ach of items | limitTo:limit" class="achievement" [mdTooltip]="ach.Title">
+    <img [src]="ach.BadgeName" [alt]="ach.Description">
+  </div>
+  <div class="achievement">
+    <div class="see-more-achievements" *ngIf="items.length > limit" (click)="limit = items.length">+{{items.length - limit}}</div>
+  </div>
+</div>

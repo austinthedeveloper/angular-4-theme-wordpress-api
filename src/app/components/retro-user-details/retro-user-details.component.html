@@ -1,0 +1,43 @@
+<article>
+  <h1 class="page-title">User Details</h1>
+  <md-card class="game-card">
+    <md-card-title>
+      <span class="md-headline">{{data.LastActivity.User}}</span>
+      <span class="md-subhead">Rank: {{data.Rank}}</span>
+      <span class="md-subhead">Status: {{data.Status}}</span>
+      <span class="md-subhead">Last Login: {{data.LastLogin | date: 'longDate'}}</span>
+      <span class="md-subhead">Member Since: {{data.MemberSince | date: 'longDate'}}</span>
+    </md-card-title>
+  </md-card>
+  <h2>Recently Played Games</h2>
+  <md-card *ngFor="let game of data.RecentlyPlayed" class="game-card">
+    <md-card-title>
+      <div class="row">
+        <div class="col">
+          <span class="md-headline">{{game.Title}}</span>
+          <span class="md-subhead">{{game.ConsoleName}}</span>
+          <span class="md-subhead">Last Played: {{game.LastPlayed | date: 'longDate'}}</span>
+        </div>
+        <div class="col-3 text-right">
+          <img [src]="game.ImageIcon" [alt]="game.Title" class="rounded-circle">
+        </div>
+      </div>
+    </md-card-title>
+    <div *ngIf="game.achievements" class="retro-achievements clearfix">
+      <h3>Achievements ({{game.achievements[1] ? game.achievements[1].length : 0}} / {{game.achievementLength}})
+        <button class="pull-right" *ngIf="!game.toggleAch" md-raised-button color="primary" (click)="game.toggleAch = !game.toggleAch">View</button>
+      </h3>
+      <md-progress-bar *ngIf="game.achievements[1]" mode="determinate" [value]="(game.achievements[1].length / game.achievementLength) * 100"></md-progress-bar>
+      <div *ngIf="game.toggleAch">
+        <div class="clearfix" *ngIf="game.achievements[0]">
+          <h3>Locked ({{game.achievements[0].length}})</h3>
+          <app-retro-achievements [items]="game.achievements[0]"></app-retro-achievements>
+        </div>
+        <div class="clearfix" *ngIf="game.achievements[1]">
+          <h3>Unlocked ({{game.achievements[1].length}})</h3>
+          <app-retro-achievements [items]="game.achievements[1]"></app-retro-achievements>
+        </div>
+      </div>
+    </div>
+  </md-card>
+</article>

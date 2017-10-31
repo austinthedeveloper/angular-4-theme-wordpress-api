@@ -1,3 +1,7 @@
+import { RetroGameProgressComponent } from './components/retro-game-progress/retro-game-progress.component';
+import { RetroUserDetailsComponent } from './components/retro-user-details/retro-user-details.component';
+import { RetroResolver, RetroUsersResolver, RetroUserResolver, RetroGameProgressResolver, RetroPersonalResolver } from './components/retro/retro.resolver';
+import { RetroComponent } from './components/retro/retro.component';
 import { ModulesComponent } from './components/modules/modules.component';
 import { TestingComponent } from './components/testing/testing.component';
 import { MainResolver } from './components/main/main.resolver';
@@ -105,6 +109,28 @@ export const routerConfig: Routes = [
   {
     path: 'testing',
     component: TestingComponent
+  },
+  {
+    path: 'retro',
+    component: RetroComponent,
+    resolve: {
+      detail: RetroUsersResolver,
+      personal: RetroPersonalResolver
+    }
+  },
+  {
+    path: 'retro/user/:user',
+    component: RetroUserDetailsComponent,
+    resolve: {
+      detail: RetroUserResolver
+    }
+  },
+  {
+    path: 'retro/user/:user/:game',
+    component: RetroGameProgressComponent,
+    resolve: {
+      detail: RetroGameProgressResolver
+    }
   },
   {
     path: '**',

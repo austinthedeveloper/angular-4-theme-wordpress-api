@@ -10,10 +10,9 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
-
 @import "~bootstrap/scss/bootstrap-grid";
-
 @import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/utilities";
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic);
 
@@ -26,6 +25,10 @@ html, body {
   height: 100%;
   overflow: hidden;
   margin: 0;
+}
+
+.clearfix {
+  @include clearfix;
 }
 
 *, *:before, *:after {
