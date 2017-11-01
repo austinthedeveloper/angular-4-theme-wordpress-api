@@ -16,6 +16,7 @@ export class RetroComponent implements OnInit {
 
   processing: boolean;
   message: string;
+  user: string;
 
   constructor(private route: ActivatedRoute,
     private router: Router,
