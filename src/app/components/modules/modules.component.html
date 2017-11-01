@@ -2,84 +2,118 @@
 
 <p>These are Angular 4 modules either that I have either created or re-built from an AngularJS application.</p>
 
-<h2>Angular 4 Portfolio</h2>
-<p>The Repo for this site.</p>
-<app-github-project project="angular-4-theme-wordpress-api"></app-github-project>
-
-<hr>
-
-<h2>Angular 1 Portfolio</h2>
-<p>The Repo for the AngularJS/Wordpress site. This is still used for the Angular 4 site because of the added REST API features.</p>
-<app-github-project project="Angular-Wordpress-Theme"></app-github-project>
-
-<hr>
-
-<h2>Retro Achievements Node API/Angular</h2>
-<p>This is a Node API implementation of <a href="http://retroachievements.org/" target="new">Retro Achievements</a>.
-   Retro Achievements is a service that connects with emulators to give old games achievements like the newer consoles.
-  </p>
-<p>They offer endpoints written in PHP. These calls were then converted to Typescript by me on a separate server.
-</p>
-<button md-raised-button color="primary" [routerLink]="['/retro']">View Project</button>
-
-<hr>
-
-<h2>Count-To</h2>
-<p>Counts from a number to another number over a set time.</p>
-<app-github-project project="angular-count-to"></app-github-project>
-<h3>Demo</h3>
-<div class="Row">
-  <button md-button (click)="activeCount.count = 100">Click to start</button>
-  <span [CountTo]="activeCount.count" [from]="activeCount.from" [duration]="activeCount.duration"></span>
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Angular 4 Portfolio</h2>
+  </div>
+  <div class="card-body">
+    <p>The Repo for this site.</p>
+    <app-github-project project="angular-4-theme-wordpress-api"></app-github-project>
+  </div>
 </div>
-<hr>
 
-<h2>Truncate Pipes</h2>
-<app-github-project project="angular-truncate-pipes"></app-github-project>
-<p>These 3 pipes are from <a href="https://github.com/sparkalow/angular-truncate">this truncate project</a>.
-  I found them very useful when dealing with data tables that I brought them over to Angular 4.</p>
-<p>Original Word: <b>{{truncateWord}}</b></p>
-<table class="table table-bordered table-striped">
-  <thead>
-    <th>Pipe</th>
-    <th>Args</th>
-    <th>Result</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>characters</td>
-      <td>5</td>
-      <td>{{truncateWord | characters:5}}</td>
-    </tr>
-    <tr>
-      <td>characters</td>
-      <td>0</td>
-      <td>{{truncateWord | characters:0}}</td>
-    </tr>
-    <tr>
-      <td>characters</td>
-      <td>10:true</td>
-      <td>{{truncateWord | characters:10:true}}</td>
-    </tr>
-    <tr>
-      <td>splitcharacters</td>
-      <td>15</td>
-      <td>{{truncateWord | splitcharacters:15}}</td>
-    </tr>
-    <tr>
-      <td>splitcharacters</td>
-      <td></td>
-      <td>{{truncateWord | splitcharacters}}</td>
-    </tr>
-    <tr>
-      <td>words</td>
-      <td></td>
-      <td>{{truncateWord | words}}</td>
-    </tr>
-    <tr>
-      <td>words</td>
-      <td>2</td>
-      <td>{{truncateWord | words: 2}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Angular 1 Portfolio</h2>
+  </div>
+  <div class="card-body">
+    <p>The Repo for the AngularJS/Wordpress site. This is still used for the Angular 4 site because of the added REST API features.</p>
+    <app-github-project project="Angular-Wordpress-Theme"></app-github-project>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Retro Achievements Node API/Angular</h2>
+  </div>
+  <div class="card-body">
+    <p>This is a Node API implementation of
+      <a href="http://retroachievements.org/" target="new">Retro Achievements</a>. Retro Achievements is a service that connects with emulators to give old games achievements like
+      the newer consoles.
+    </p>
+    <p>They offer endpoints written in PHP. These calls were then converted to Typescript by me on a separate server.
+    </p>
+
+  </div>
+  <div class="card-footer actions">
+    <button md-raised-button color="primary" [routerLink]="['/retro']">View Project</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Count-To</h2>
+  </div>
+  <div class="card-body">
+    <p>Counts from a number to another number over a set time.</p>
+    <app-github-project project="angular-count-to"></app-github-project>
+    <h3>Demo</h3>
+    <div class="row">
+      <div class="col">
+        <button md-button (click)="activeCount.count = 100">Click to start</button>
+      </div>
+      <div class="col">
+        <span [CountTo]="activeCount.count" [from]="activeCount.from" [duration]="activeCount.duration"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <h2 class="card-title">Truncate Pipes</h2>
+  </div>
+  <div class="card-body">
+    <app-github-project project="angular-truncate-pipes"></app-github-project>
+    <p>These 3 pipes are from
+      <a href="https://github.com/sparkalow/angular-truncate">this truncate project</a>. I found them very useful when dealing with data tables that I brought them over to Angular 4.</p>
+    <p>Original Word:
+      <b>{{truncateWord}}</b>
+    </p>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <th>Pipe</th>
+        <th>Args</th>
+        <th>Result</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>characters</td>
+          <td>5</td>
+          <td>{{truncateWord | characters:5}}</td>
+        </tr>
+        <tr>
+          <td>characters</td>
+          <td>0</td>
+          <td>{{truncateWord | characters:0}}</td>
+        </tr>
+        <tr>
+          <td>characters</td>
+          <td>10:true</td>
+          <td>{{truncateWord | characters:10:true}}</td>
+        </tr>
+        <tr>
+          <td>splitcharacters</td>
+          <td>15</td>
+          <td>{{truncateWord | splitcharacters:15}}</td>
+        </tr>
+        <tr>
+          <td>splitcharacters</td>
+          <td></td>
+          <td>{{truncateWord | splitcharacters}}</td>
+        </tr>
+        <tr>
+          <td>words</td>
+          <td></td>
+          <td>{{truncateWord | words}}</td>
+        </tr>
+        <tr>
+          <td>words</td>
+          <td>2</td>
+          <td>{{truncateWord | words: 2}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

@@ -6,13 +6,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 // Bootstrap grid import
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/reboot";
-@import "~bootstrap/scss/bootstrap-grid";
-@import "~bootstrap/scss/tables";
-@import "~bootstrap/scss/utilities";
+@import 'scss/bootstrap';
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic);
 
@@ -20,6 +14,7 @@
 @import 'scss/pre';
 @import 'scss/awards';
 @import 'scss/wordpress';
+@import 'scss/card';
 
 html, body {
   height: 100%;
@@ -59,7 +54,8 @@ b {
 .main-sidenav {
   width: 320px;
   background: $primaryColor;
-  @include gradient(darken($primaryColor, 5%), $primaryColor, vertical);
+  @include gradient(darken($primaryColor, 7%), $primaryColor, vertical);
+  // @include gradient-horizontal($primaryColor, darken($primaryColor, 10%), 200%);
   color: $white;
 }
 .main-container {

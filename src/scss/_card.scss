@@ -1,0 +1,27 @@
+@import '~scss/variables';
+
+.card {
+  border: $base-border;
+  border-radius: 4px;
+  margin-bottom: 25px;
+  & > div {
+    padding: 10px 20px;
+  }
+  .card-header {
+    border-bottom : $base-border;
+    .card-title {
+      font-weight: 300;
+    }
+  }
+  .card-body {
+    &.no-padding {
+      padding: 0;
+    }
+  }
+  .card-footer {
+    border-top: $base-border;
+    &.actions {
+      text-align: right;
+    }
+  }
+}
