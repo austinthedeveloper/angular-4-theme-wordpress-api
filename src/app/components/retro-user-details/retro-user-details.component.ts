@@ -9,6 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RetroUserDetailsComponent implements OnInit {
   @Input()
   'data' = this.route.snapshot.data['detail'];
+  // @Input()
+  // 'feed' = this.route.snapshot.data['feed'];
 
   limit = 5;
 

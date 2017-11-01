@@ -2,7 +2,8 @@ import { RetroGameProgressComponent } from './components/retro-game-progress/ret
 import { RetroAchievementsComponent } from './components/retro-achievements/retro-achievements.component';
 import { LimitToPipe } from './pipes/limitTo.pipe';
 import { RetroUserDetailsComponent } from './components/retro-user-details/retro-user-details.component';
-import { RetroResolver, RetroUsersResolver, RetroUserResolver, RetroGameProgressResolver, RetroPersonalResolver } from './components/retro/retro.resolver';
+import { RetroResolver, RetroUsersResolver, RetroUserResolver,
+  RetroGameProgressResolver, RetroPersonalResolver, RetroUserFeedResolver } from './components/retro/retro.resolver';
 import { RetroComponent } from './components/retro/retro.component';
 import { RetroService } from './services/Retro.service';
 import { FileCheckMultipleComponent } from './components/file-check-multiple/file-check-multiple.component';
@@ -53,6 +54,7 @@ import { MenuService } from './services/Menu.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 // material design imports
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule} from '@angular/material';
@@ -102,7 +104,9 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     BrowserAnimationsModule,
     MdModules,
     CountToModule,
-    TruncatePipesModule
+    TruncatePipesModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     CategoryService,
@@ -129,7 +133,8 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     RetroUsersResolver,
     RetroUserResolver,
     RetroGameProgressResolver,
-    RetroPersonalResolver
+    RetroPersonalResolver,
+    RetroUserFeedResolver
   ],
   bootstrap: [AppComponent]
 })

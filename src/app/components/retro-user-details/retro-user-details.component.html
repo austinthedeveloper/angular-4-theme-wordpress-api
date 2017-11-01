@@ -19,7 +19,9 @@
           <span class="md-subhead">Last Played: {{game.LastPlayed | date: 'longDate'}}</span>
         </div>
         <div class="col-3 text-right">
-          <img [src]="game.ImageIcon" [alt]="game.Title" class="rounded-circle">
+          <div class="rounded-circle game-icon">
+            <img [src]="game.ImageIcon" [alt]="game.Title" class="">
+          </div>
         </div>
       </div>
     </md-card-title>

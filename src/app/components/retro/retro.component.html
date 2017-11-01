@@ -1,4 +1,16 @@
-<h1>Retro Achievements Top 10</h1>
+<h1>Retro Achievements</h1>
+<h2>Search for User</h2>
+<form (ngSubmit)="search(User.value)" #searchUserForm="ngForm">
+  <md-form-field class="example-full-width">
+    <input mdInput id="user" placeholder="Enter username" required [(ngModel)]="user" name="User" #User="ngModel">
+  </md-form-field>
+  <div *ngIf="message">
+    No User found
+  </div>
+  <button md-raised-button color="primary" [disabled]="searchUserForm.form.invalid || processing">View</button>
+</form>
+
+<h2>Retro Achievements Top 10</h2>
 <table class="table table-bordered table-striped">
   <thead>
     <th>Rank</th>
@@ -12,7 +24,7 @@
       <td>
         <b>Me</b>
       </td>
-      <td>{{personal.Score}}</td>
+      <td class="text-right">{{personal.Score}}</td>
       <td class="text-right">
         <button md-raised-button color="primary" class="read-more" [routerLink]="['/retro/user/', 'foleykoontz']">View</button>
       </td>
@@ -20,7 +32,7 @@
     <tr *ngFor="let user of data; let i = index">
       <td>{{i + 1}}</td>
       <td>{{user[1]}}</td>
-      <td>{{user[2]}}</td>
+      <td class="text-right">{{user[2] | number}}</td>
       <td class="text-right">
         <button md-raised-button color="primary" class="read-more" [routerLink]="['/retro/user/', user[1]]">View</button>
       </td>

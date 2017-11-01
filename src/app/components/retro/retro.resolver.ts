@@ -35,6 +35,16 @@ export class RetroUserResolver implements Resolve<any> {
 }
 
 @Injectable()
+export class RetroUserFeedResolver implements Resolve<any> {
+  constructor(private retroService: RetroService) { }
+  resolve(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<any> {
+    return this.retroService.getUserFeed(route.params['user']);
+  }
+}
+
+@Injectable()
 export class RetroGameProgressResolver implements Resolve<any> {
   constructor(private retroService: RetroService) { }
   resolve(

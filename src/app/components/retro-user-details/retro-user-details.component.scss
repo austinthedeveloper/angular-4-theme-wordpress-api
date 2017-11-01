@@ -7,6 +7,16 @@
     font-size: 14px;
     line-height: 20px;
   }
+  .game-icon {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+    display: inline-block;
+    img {
+      width: 100%;
+    }
+  }
+
 
 }
 .retro-achievements {

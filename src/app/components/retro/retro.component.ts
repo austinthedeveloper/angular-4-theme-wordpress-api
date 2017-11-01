@@ -1,4 +1,5 @@
-import { ActivatedRoute } from '@angular/router';
+import { RetroService } from './../../services/Retro.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -13,9 +14,30 @@ export class RetroComponent implements OnInit {
   @Input()
   'personal' = this.route.snapshot.data['personal'];
 
-  constructor(private route: ActivatedRoute) { }
+  processing: boolean;
+  message: string;
+
+  constructor(private route: ActivatedRoute,
+    private router: Router,
+    private retroService: RetroService) { }
 
   ngOnInit() {
+  }
+
+  search(user: string) {
+    this.processing = true;
+    this.message = null;
+    this.retroService.getUserRankAndScore(user)
+      .subscribe(
+        (res) => {
+          if (res.Score === 0 && res.Rank === '1') {
+            this.message = 'No User Found';
+            this.processing = false;
+          } else {
+            this.router.navigateByUrl(`/retro/user/${user}`);
+          }
+        },
+        (err) => { });
   }
 
 }

@@ -52,6 +52,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: $base-weight;
 }
 
+b {
+  font-weight: 600;
+}
+
 .main-sidenav {
   width: 320px;
   background: $primaryColor;
