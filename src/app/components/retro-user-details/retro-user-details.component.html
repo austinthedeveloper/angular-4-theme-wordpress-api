@@ -11,6 +11,7 @@
   </md-card>
   <h2>Recently Played Games</h2>
   <md-card *ngFor="let game of data.RecentlyPlayed" class="game-card">
+    <div class="card-border" [ngClass]="'console-' + (game.ConsoleID || 'default')"></div>
     <md-card-title>
       <div class="row">
         <div class="col">

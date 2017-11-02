@@ -1,0 +1,36 @@
+@mixin consoles($id, $make) {
+  .console-#{$id} {
+    background: $make;
+  }
+}
+
+$console-1: #9B1922;
+$console-2: #00219C;
+$console-3: #8C66BC;
+$console-4: #464779;
+$console-5: #0086C6;
+$console-6: #087E98;
+$console-7: #F5364A;
+$console-8: #CCC;
+$console-9: #CCC;
+$console-10: #CCC;
+$console-11: #CCC;
+$console-12: #CCC;
+$console-13: #CCC;
+$console-14: #CCC;
+
+@include consoles(default, #CCC);
+@include consoles(1, $console-1);
+@include consoles(2, $console-2);
+@include consoles(3, $console-3);
+@include consoles(4, $console-4);
+@include consoles(5, $console-5);
+@include consoles(6, $console-6);
+@include consoles(7, $console-7);
+@include consoles(8, $console-8);
+@include consoles(9, $console-9);
+@include consoles(10, $console-10);
+@include consoles(11, $console-11);
+@include consoles(12, $console-12);
+@include consoles(13, $console-13);
+@include consoles(14, $console-14);
