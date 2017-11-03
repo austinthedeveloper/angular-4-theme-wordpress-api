@@ -1,3 +1,4 @@
+import { ContactService } from './services/Contact.service';
 import { MoveThePipe } from './pipes/moveThe.pipe';
 import { ConsoleIdPipe } from './pipes/consoleId.pipe';
 import { RetroGameProgressComponent } from './components/retro-game-progress/retro-game-progress.component';
@@ -125,6 +126,7 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     PostService,
     ProcessingService,
     ProjectService,
+    ContactService,
     AboutResolver,
     AwardsResolver,
     PostResolver,

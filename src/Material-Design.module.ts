@@ -1,14 +1,13 @@
 import {MatToolbarModule, MatButtonModule, MdCheckboxModule, MatSidenavModule,
   MatTooltipModule, MatCardModule, MatProgressSpinnerModule, MatProgressBarModule, MatInputModule,
-  MatSlideToggleModule} from '@angular/material';
+  MatSlideToggleModule, MatFormFieldModule} from '@angular/material';
 import { NgModule } from '@angular/core';
 
+const list = [MatToolbarModule, MatButtonModule, MatSidenavModule, MatTooltipModule,
+  MatCardModule, MatProgressSpinnerModule, MatProgressBarModule, MatInputModule,
+  MatSlideToggleModule, MatFormFieldModule];
 @NgModule({
-  imports: [MatToolbarModule, MatButtonModule, MatSidenavModule, MatTooltipModule,
-     MatCardModule, MatProgressSpinnerModule, MatProgressBarModule, MatInputModule,
-    MatSlideToggleModule],
-  exports: [MatToolbarModule, MatButtonModule, MatSidenavModule, MatTooltipModule,
-     MatCardModule, MatProgressSpinnerModule, MatProgressBarModule, MatInputModule,
-    MatSlideToggleModule],
+  imports: list,
+  exports: list,
 })
 export class MdModules { }

@@ -1,1 +1,24 @@
+
 <app-page [data]="data"></app-page>
+<form (ngSubmit)="postForm(contactForm)" #contactForm="ngForm" class="card">
+  <div class="card-header">
+    <h2 class="card-title">Contact Form</h2>
+  </div>
+  <div class="card-body">
+    <md-form-field class="w-100">
+      <input mdInput id="name" placeholder="Enter name" required
+      [(ngModel)]="contactForm.name" name="Name" #Name="ngModel">
+    </md-form-field>
+    <md-form-field class="w-100">
+      <input type="email" mdInput id="email" placeholder="Enter email" required
+      [(ngModel)]="contactForm.email" name="Email" #Email="ngModel" [pattern]="patterns.email">
+    </md-form-field>
+    <md-form-field class="w-100">
+      <textarea mdInput id="message" placeholder="Enter message"
+      [(ngModel)]="contactForm.message" name="Message" #Message="ngModel"></textarea>
+    </md-form-field>
+  </div>
+  <div class="card-footer actions">
+    <button md-raised-button color="primary" [disabled]="contactForm.form.invalid || processing">Submit</button>
+  </div>
+</form>
