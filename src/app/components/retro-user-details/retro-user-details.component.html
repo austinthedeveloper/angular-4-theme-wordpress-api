@@ -2,6 +2,9 @@
   <h1 class="page-title">User Details</h1>
   <md-card class="game-card">
     <md-card-title>
+      <div class="rounded-circle game-icon pull-right">
+        <img *ngIf="data.UserPic" [src]="data.UserPic" [alt]="data.LastActivity.User" class="">
+      </div>
       <span class="md-headline">{{data.LastActivity.User}}</span>
       <span class="md-subhead">Rank: {{data.Rank}}</span>
       <span class="md-subhead">Status: {{data.Status}}</span>
@@ -15,7 +18,7 @@
     <md-card-title>
       <div class="row">
         <div class="col">
-          <span class="md-headline">{{game.Title}}</span>
+          <span class="md-headline">{{game.Title | moveThe}}</span>
           <span class="md-subhead">{{game.ConsoleName}}</span>
           <span class="md-subhead">Last Played: {{game.LastPlayed | amTimeAgo}}</span>
         </div>
@@ -44,12 +47,12 @@
     </div>
   </md-card>
   <h2>User Feed</h2>
-  <md-card *ngFor="let game of feed | orderBy: 'timestamp'" class="game-card">
-    <div class="card-border" [ngClass]="'console-' + ((game.ConsoleName | consoleId) || 'default')"></div>
+  <md-card *ngFor="let game of feed | orderBy: 'timestamp'" class="game-card game-feed">
+    <div class="card-border-vertical" [ngClass]="'console-' + ((game.ConsoleName | consoleId) || 'default')"></div>
     <md-card-title>
       <div class="row">
         <div class="col">
-          <span class="md-headline">{{game.GameTitle}}</span>
+          <span class="md-headline">{{game.GameTitle | moveThe}}</span>
           <span class="md-subhead">{{game.ConsoleName}}</span>
           <span class="md-subhead" [innerHtml]="game.message"></span>
         </div>

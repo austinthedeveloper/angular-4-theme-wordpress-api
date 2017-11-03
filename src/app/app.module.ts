@@ -1,3 +1,4 @@
+import { MoveThePipe } from './pipes/moveThe.pipe';
 import { ConsoleIdPipe } from './pipes/consoleId.pipe';
 import { RetroGameProgressComponent } from './components/retro-game-progress/retro-game-progress.component';
 import { RetroAchievementsComponent } from './components/retro-achievements/retro-achievements.component';
@@ -99,7 +100,8 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     RetroUserDetailsComponent,
     RetroAchievementsComponent,
     RetroGameProgressComponent,
-    ConsoleIdPipe
+    ConsoleIdPipe,
+    MoveThePipe
 ],
   imports: [
     BrowserModule,
