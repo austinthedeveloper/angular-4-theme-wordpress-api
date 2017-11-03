@@ -4,10 +4,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'moveThe'
 })
 export class MoveThePipe implements PipeTransform {
-  private pattern: RegExp = /(.)+, The/g;
+  private pattern: RegExp = new RegExp('(.)+, The');
 
   transform(value: any, args?: any): any {
-    if (value && this.pattern.test(value)) {
+    if (this.pattern.test(value)) {
       value = value.replace(', The', '');
       value = `The ${value}`;
     }

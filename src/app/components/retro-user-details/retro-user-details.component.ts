@@ -11,8 +11,6 @@ export class RetroUserDetailsComponent implements OnInit {
   'data' = this.route.snapshot.data['detail'];
   @Input()
   'feed' = this.route.snapshot.data['feed'];
-  // @Input()
-  // 'feed' = this.route.snapshot.data['feed'];
   user: string;
 
   limit = 5;
@@ -21,7 +19,6 @@ export class RetroUserDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.route.snapshot.params['user'];
-    console.log('test', this.user);
   }
 
 }
