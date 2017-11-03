@@ -46,20 +46,22 @@
       </div>
     </div>
   </md-card>
-  <h2>User Feed {{feed.length}} (Last Updated: {{feedUpdated | amTimeAgo}}) </h2>
-  <button md-raised-button color="primary" (click)="refresh()" [disabled]="refreshFeed">Refresh Feed</button>
-  <md-card *ngFor="let game of feed | orderBy: 'timestamp'" class="game-card game-feed">
+  <h2>User Feed {{feed.length}}</h2>
+  <md-slide-toggle (change)="toggleFeed()" [checked]="feedToggle" [disabled]="refreshFeed">Live Feed (Last Updated: {{feedUpdated | amTimeAgo}})</md-slide-toggle>
+  <md-card *ngFor="let game of feed | orderBy: order: true" class="game-card game-feed">
     <div class="card-border-vertical" [ngClass]="'console-' + ((game.ConsoleName | consoleId) || 'default')"></div>
     <md-card-title>
       <div class="row">
         <div class="col">
           <span class="md-headline">{{game.GameTitle | moveThe}}</span>
           <span class="md-subhead">{{game.ConsoleName}}</span>
-          <span class="md-subhead" [innerHtml]="game.message"></span>
+          <span class="md-subhead"><b>{{game.message}}</b></span>
+          <span class="md-subhead" *ngIf="game.AchTitle">{{game.AchTitle}}</span>
+          <span class="md-subhead" *ngIf="game.AchDesc">{{game.AchDesc}}</span>
         </div>
         <div class="col-3 text-right">
           <div class="rounded-circle game-icon">
-            <img *ngIf="game.GameIcon" [src]="game.GameIcon" [alt]="game.GameTitle" class="">
+            <img *ngIf="game.GameIcon" [src]="game.GameIcon" [alt]="game.GameTitle">
           </div>
         </div>
       </div>

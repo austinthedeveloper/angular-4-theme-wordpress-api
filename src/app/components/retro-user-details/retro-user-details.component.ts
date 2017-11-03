@@ -15,7 +15,9 @@ export class RetroUserDetailsComponent implements OnInit {
   'feed' = this.route.snapshot.data['feed'];
   user: string;
   refreshFeed: boolean;
+  feedToggle: boolean;
   feedUpdated: Date;
+  order = 'timestamp';
 
   limit = 5;
 
@@ -26,17 +28,24 @@ export class RetroUserDetailsComponent implements OnInit {
     this.feedUpdated = new Date();
   }
 
+  toggleFeed() {
+    this.feedToggle = !this.feedToggle;
+    this.refresh();
+  }
+
   refresh() {
-    this.refreshFeed = true;
-    this.feedUpdated = new Date();
-    this.retroService.getUserFeed(this.user)
-      .subscribe(
+    if (this.feedToggle) {
+      this.refreshFeed = true;
+      this.feedUpdated = new Date();
+      this.retroService.getUserFeed(this.user)
+        .subscribe(
         (res) => {
           this.refreshFeed = false;
-          this.feed = _.unionBy(res, this.feed, 'ID');
+          this.feed = _.unionBy(this.feed, res, 'ID');
           this.timeout();
         },
         (err) => { });
+    }
   }
 
   timeout(val = 10000) {
