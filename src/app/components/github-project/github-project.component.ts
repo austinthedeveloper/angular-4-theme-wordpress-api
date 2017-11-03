@@ -18,7 +18,6 @@ export class GithubProjectComponent implements OnInit {
     this.githubService.getRepo('austinthedeveloper', this.project)
     .subscribe(
       (res) => {
-        console.log('hit', res);
         this.data = res;
       }
     );

@@ -19,16 +19,5 @@ export class ModulesComponent implements OnInit {
   constructor(private retroService: RetroService) { }
 
   ngOnInit() {
-    this.getUser();
-  }
-
-  getUser(user: string = 'foleykoontz') {
-    this.retroService.getUserRankAndScore(user)
-    .subscribe(
-      (res) => {
-        console.log('hit', res);
-      },
-      (err) => console.log
-    );
   }
 }

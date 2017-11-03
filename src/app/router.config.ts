@@ -123,7 +123,7 @@ export const routerConfig: Routes = [
     component: RetroUserDetailsComponent,
     resolve: {
       detail: RetroUserResolver,
-      // feed: RetroUserFeedResolver
+      feed: RetroUserFeedResolver
     }
   },
   {

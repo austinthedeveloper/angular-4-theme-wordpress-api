@@ -4,13 +4,26 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { environment } from '../../environments/environment';
 import * as _ from 'lodash';
+import * as io from 'socket.io-client';
 
 @Injectable()
 export class RetroService {
   private retroUrl = `${environment.nodeServer}retro/`;
   private defaultUser = 'foleykoontz';
+  private socket = io(environment.socketServer);
 
   constructor(private http: HttpClient) { }
+
+  setUser(user: string): any {
+    this.socket.emit('user', user);
+  }
+
+  getLiveUserFeed(): any {
+    console.log('get feed');
+    this.socket.on('user', (user) => {
+      console.log('USER!', user);
+    });
+  }
 
   getTop10(): Observable<any> {
     const url = `${this.retroUrl}users`;

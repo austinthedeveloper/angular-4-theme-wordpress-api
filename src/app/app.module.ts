@@ -1,3 +1,4 @@
+import { ConsoleIdPipe } from './pipes/consoleId.pipe';
 import { RetroGameProgressComponent } from './components/retro-game-progress/retro-game-progress.component';
 import { RetroAchievementsComponent } from './components/retro-achievements/retro-achievements.component';
 import { LimitToPipe } from './pipes/limitTo.pipe';
@@ -54,11 +55,13 @@ import { MenuService } from './services/Menu.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // material design imports
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdButtonModule, MdCheckboxModule} from '@angular/material';
 import { MdModules } from './../Material-Design.module';
+import { MomentModule } from 'angular2-moment';
+import { OrderModule } from 'ngx-order-pipe';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -95,7 +98,8 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     RetroComponent,
     RetroUserDetailsComponent,
     RetroAchievementsComponent,
-    RetroGameProgressComponent
+    RetroGameProgressComponent,
+    ConsoleIdPipe
 ],
   imports: [
     BrowserModule,
@@ -107,6 +111,8 @@ import { FileCheckComponent } from './components/file-check/file-check.component
     TruncatePipesModule,
     FormsModule,
     ReactiveFormsModule,
+    MomentModule,
+    OrderModule
   ],
   providers: [
     CategoryService,
