@@ -8,8 +8,8 @@
     <md-form-field class="w-100">
       <input mdInput id="user" placeholder="Enter username" required [(ngModel)]="user" name="User" #User="ngModel">
     </md-form-field>
-    <div *ngIf="message">
-      No User found
+    <div *ngIf="message" class="alert alert-danger">
+      No User found. Please try another User.
     </div>
   </div>
   <div class="card-footer actions">

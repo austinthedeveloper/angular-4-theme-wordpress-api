@@ -8,15 +8,20 @@
     <md-form-field class="w-100">
       <input mdInput id="name" placeholder="Enter name" required
       [(ngModel)]="contactForm.name" name="Name" #Name="ngModel">
+      <md-error *ngIf="Name.invalid">Name is required.</md-error>
     </md-form-field>
     <md-form-field class="w-100">
       <input type="email" mdInput id="email" placeholder="Enter email" required
       [(ngModel)]="contactForm.email" name="Email" #Email="ngModel" [pattern]="patterns.email">
+      <md-error *ngIf="Email.invalid">Email is required.</md-error>
     </md-form-field>
     <md-form-field class="w-100">
       <textarea mdInput id="message" placeholder="Enter message"
       [(ngModel)]="contactForm.message" name="Message" #Message="ngModel"></textarea>
     </md-form-field>
+    <div *ngIf="message" class="alert" [ngClass]="'alert-' + message.type">
+      {{message.message}}
+    </div>
   </div>
   <div class="card-footer actions">
     <button md-raised-button color="primary" [disabled]="contactForm.form.invalid || processing">Submit</button>

@@ -1,4 +1,4 @@
-import { WORDPRESS_URL } from './../shared/api';
+import { environment } from './../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
@@ -6,7 +6,7 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class MenuService {
 
-  private url = `${WORDPRESS_URL}/menus`;
+  private url = `${environment.WORDPRESS_URL}/menus`;
 
   constructor(private http: HttpClient) { }
 
