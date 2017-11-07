@@ -56,7 +56,6 @@ b {
   width: 320px;
   background: $primaryColor;
   @include gradient(darken($primaryColor, 7%), $primaryColor, vertical);
-  // @include gradient-horizontal($primaryColor, darken($primaryColor, 10%), 200%);
   color: $white;
 }
 .main-container {
