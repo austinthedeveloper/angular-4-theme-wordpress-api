@@ -10,11 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
   public data: any;
-  public contactForm = {
-    name: '',
-    email: '',
-    message: ''
-  };
+  public contactForm: {name: string, email: string, message: string};
   private contactId = '327';
   processing: boolean;
   public patterns;

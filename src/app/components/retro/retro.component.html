@@ -6,7 +6,7 @@
   </div>
   <div class="card-body">
     <mat-form-field class="w-100">
-      <input mdInput id="user" placeholder="Enter username" required [(ngModel)]="user" name="User" #User="ngModel">
+      <input matInput id="user" placeholder="Enter username" required [(ngModel)]="user" name="User" #User="ngModel">
     </mat-form-field>
     <div *ngIf="message" class="alert alert-danger">
       No User found. Please try another User.

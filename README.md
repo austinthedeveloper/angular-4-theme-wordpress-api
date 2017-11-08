@@ -2,7 +2,7 @@
 
 - This is an Angular 4 application of `http://austinthedeveloper.com`.
 - It uses the Wordpress API located on the main site
-- The site is then deployed to Heroku and built on the server, found at `http://shielded-citadel-17193.herokuapp.com/`.
+- The site is then deployed to Heroku and built on the server, found at `http://stewart-portfolio.herokuapp.com`.
 
 ## Development server
 
