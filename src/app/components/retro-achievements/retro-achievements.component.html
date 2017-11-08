@@ -1,5 +1,5 @@
 <div class="clearfix" *ngIf="items">
-  <div *ngFor="let ach of items | limitTo:limit" class="achievement" [mdTooltip]="ach.Title">
+  <div *ngFor="let ach of items | limitTo:limit" class="achievement" [matTooltip]="ach.Title">
     <img [src]="ach.BadgeName" [alt]="ach.Description">
   </div>
   <div class="achievement">

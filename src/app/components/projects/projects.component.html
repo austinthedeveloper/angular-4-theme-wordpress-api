@@ -1,19 +1,19 @@
 <h1 class="page-title">Projects</h1>
 <div class="row no-gutter">
   <div class="project-card col-6" *ngFor="let post of projects">
-    <md-card>
-      <img [src]="post.better_featured_image.media_details.sizes.medium.source_url" class="md-card-image" [attr.alt]="post.title.rendered">
-      <md-card-title>
-        <span class="md-headline">{{post.title.rendered}}</span>
-        <span class="md-subhead">Project Date: {{post.acf.project_date | date:'mediumDate'}}</span>
-      </md-card-title>
-      <md-card-content *ngIf="post.excerpt" [innerHtml]="post.excerpt.rendered">
-      </md-card-content>
-      <md-card-actions>
-        <a md-button color="primary" *ngIf="post.acf.project_url" [href]="post.acf.project_url" target="_new">View Site</a>
-        <a md-button color="primary" *ngIf="post.acf.gallery || post.content.rendered" [routerLink]="['/projects', post.slug]">See More</a>
-      </md-card-actions>
-    </md-card>
+    <mat-card>
+      <img [src]="post.better_featured_image.media_details.sizes.medium.source_url" class="mat-card-image" [attr.alt]="post.title.rendered">
+      <mat-card-title>
+        <span class="mat-headline">{{post.title.rendered}}</span>
+        <span class="mat-subhead">Project Date: {{post.acf.project_date | date:'mediumDate'}}</span>
+      </mat-card-title>
+      <mat-card-content *ngIf="post.excerpt" [innerHtml]="post.excerpt.rendered">
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button color="primary" *ngIf="post.acf.project_url" [href]="post.acf.project_url" target="_new">View Site</a>
+        <a mat-button color="primary" *ngIf="post.acf.gallery || post.content.rendered" [routerLink]="['/projects', post.slug]">See More</a>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
 <app-file-check-multiple [items]="files"></app-file-check-multiple>

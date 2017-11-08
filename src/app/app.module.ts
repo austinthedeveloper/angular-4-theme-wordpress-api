@@ -60,7 +60,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // material design imports
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdButtonModule, MdCheckboxModule} from '@angular/material';
 import { MdModules } from './../Material-Design.module';
 import { MomentModule } from 'angular2-moment';
 import { OrderModule } from 'ngx-order-pipe';

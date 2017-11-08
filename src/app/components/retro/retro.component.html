@@ -5,15 +5,15 @@
     <h2 class="card-title">Search for User</h2>
   </div>
   <div class="card-body">
-    <md-form-field class="w-100">
+    <mat-form-field class="w-100">
       <input mdInput id="user" placeholder="Enter username" required [(ngModel)]="user" name="User" #User="ngModel">
-    </md-form-field>
+    </mat-form-field>
     <div *ngIf="message" class="alert alert-danger">
       No User found. Please try another User.
     </div>
   </div>
   <div class="card-footer actions">
-    <button md-raised-button color="primary" [disabled]="searchUserForm.form.invalid || processing">Search</button>
+    <button mat-raised-button color="primary" [disabled]="searchUserForm.form.invalid || processing">Search</button>
   </div>
 </form>
 <div class="card">
@@ -36,7 +36,7 @@
           </td>
           <td class="text-right">{{personal.Score}}</td>
           <td class="text-right">
-            <button md-raised-button color="primary" class="read-more" [routerLink]="['/retro/user/', 'foleykoontz']">View</button>
+            <button mat-raised-button color="primary" class="read-more" [routerLink]="['/retro/user/', 'foleykoontz']">View</button>
           </td>
         </tr>
         <tr *ngFor="let user of data; let i = index">
@@ -44,7 +44,7 @@
           <td>{{user[1]}}</td>
           <td class="text-right">{{user[2] | number}}</td>
           <td class="text-right">
-            <button md-raised-button color="primary" class="read-more" [routerLink]="['/retro/user/', user[1]]">View</button>
+            <button mat-raised-button color="primary" class="read-more" [routerLink]="['/retro/user/', user[1]]">View</button>
           </td>
         </tr>
       </tbody>

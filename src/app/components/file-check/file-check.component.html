@@ -1,7 +1,7 @@
 <div *ngIf="data && processed" class="file-check">
   <h3>
     {{data.name}}
-    <a md-raised-button color="primary" class="read-more pull-right" (click)="showCode = !showCode">View Code</a>
+    <a mat-raised-button color="primary" class="read-more pull-right" (click)="showCode = !showCode">View Code</a>
   </h3>
   <pre *ngIf="showCode">{{data.content}}</pre>
 </div>

@@ -1,26 +1,26 @@
 <article>
   <h1 class="page-title">User Details</h1>
-  <md-card class="game-card">
-    <md-card-title>
+  <mat-card class="game-card">
+    <mat-card-title>
       <div class="rounded-circle game-icon pull-right">
         <img *ngIf="data.UserPic" [src]="data.UserPic" [alt]="data.LastActivity.User" class="">
       </div>
-      <span class="md-headline">{{data.LastActivity.User}}</span>
-      <span class="md-subhead">Rank: {{data.Rank}}</span>
-      <span class="md-subhead">Status: {{data.Status}}</span>
-      <span class="md-subhead">Last Login: {{data.LastLogin | amTimeAgo}}</span>
-      <span class="md-subhead">Member Since: {{data.MemberSince | date: 'longDate'}}</span>
-    </md-card-title>
-  </md-card>
+      <span class="mat-headline">{{data.LastActivity.User}}</span>
+      <span class="mat-subhead">Rank: {{data.Rank}}</span>
+      <span class="mat-subhead">Status: {{data.Status}}</span>
+      <span class="mat-subhead">Last Login: {{data.LastLogin | amTimeAgo}}</span>
+      <span class="mat-subhead">Member Since: {{data.MemberSince | date: 'longDate'}}</span>
+    </mat-card-title>
+  </mat-card>
   <h2>Recently Played Games</h2>
-  <md-card *ngFor="let game of data.RecentlyPlayed" class="game-card">
+  <mat-card *ngFor="let game of data.RecentlyPlayed" class="game-card">
     <div class="card-border" [ngClass]="'console-' + (game.ConsoleID || 'default')"></div>
-    <md-card-title>
+    <mat-card-title>
       <div class="row">
         <div class="col">
-          <span class="md-headline">{{game.Title | moveThe}}</span>
-          <span class="md-subhead">{{game.ConsoleName}}</span>
-          <span class="md-subhead">Last Played: {{game.LastPlayed | amTimeAgo}}</span>
+          <span class="mat-headline">{{game.Title | moveThe}}</span>
+          <span class="mat-subhead">{{game.ConsoleName}}</span>
+          <span class="mat-subhead">Last Played: {{game.LastPlayed | amTimeAgo}}</span>
         </div>
         <div class="col-3 text-right">
           <div class="rounded-circle game-icon">
@@ -28,12 +28,12 @@
           </div>
         </div>
       </div>
-    </md-card-title>
+    </mat-card-title>
     <div *ngIf="game.achievements" class="retro-achievements clearfix">
       <h3>Achievements ({{game.achievements[1] ? game.achievements[1].length : 0}} / {{game.achievementLength}})
-        <button class="pull-right" *ngIf="!game.toggleAch" md-raised-button color="primary" (click)="game.toggleAch = !game.toggleAch">View</button>
+        <button class="pull-right" *ngIf="!game.toggleAch" mat-raised-button color="primary" (click)="game.toggleAch = !game.toggleAch">View</button>
       </h3>
-      <md-progress-bar *ngIf="game.achievements[1]" mode="determinate" [value]="(game.achievements[1].length / game.achievementLength) * 100"></md-progress-bar>
+      <mat-progress-bar *ngIf="game.achievements[1]" mode="determinate" [value]="(game.achievements[1].length / game.achievementLength) * 100"></mat-progress-bar>
       <div *ngIf="game.toggleAch">
         <div class="clearfix" *ngIf="game.achievements[0]">
           <h3>Locked ({{game.achievements[0].length}})</h3>
@@ -45,19 +45,19 @@
         </div>
       </div>
     </div>
-  </md-card>
+  </mat-card>
   <h2>User Feed {{feed.length}}</h2>
-  <md-slide-toggle (change)="toggleFeed()" [checked]="feedToggle" [disabled]="refreshFeed">Live Feed (Last Updated: {{feedUpdated | amTimeAgo}})</md-slide-toggle>
-  <md-card *ngFor="let game of feed | orderBy: order: true" class="game-card game-feed">
+  <mat-slide-toggle (change)="toggleFeed()" [checked]="feedToggle" [disabled]="refreshFeed">Live Feed (Last Updated: {{feedUpdated | amTimeAgo}})</mat-slide-toggle>
+  <mat-card *ngFor="let game of feed | orderBy: order: true" class="game-card game-feed">
     <div class="card-border-vertical" [ngClass]="'console-' + ((game.ConsoleName | consoleId) || 'default')"></div>
-    <md-card-title>
+    <mat-card-title>
       <div class="row">
         <div class="col">
-          <span class="md-headline">{{game.GameTitle | moveThe}}</span>
-          <span class="md-subhead">{{game.ConsoleName}}</span>
-          <span class="md-subhead"><b>{{game.message}}</b></span>
-          <span class="md-subhead" *ngIf="game.AchTitle">{{game.AchTitle}}</span>
-          <span class="md-subhead" *ngIf="game.AchDesc">{{game.AchDesc}}</span>
+          <span class="mat-headline">{{game.GameTitle | moveThe}}</span>
+          <span class="mat-subhead">{{game.ConsoleName}}</span>
+          <span class="mat-subhead"><b>{{game.message}}</b></span>
+          <span class="mat-subhead" *ngIf="game.AchTitle">{{game.AchTitle}}</span>
+          <span class="mat-subhead" *ngIf="game.AchDesc">{{game.AchDesc}}</span>
         </div>
         <div class="col-3 text-right">
           <div class="rounded-circle game-icon">
@@ -65,8 +65,8 @@
           </div>
         </div>
       </div>
-    </md-card-title>
-  </md-card>
+    </mat-card-title>
+  </mat-card>
 </article>
 
 
