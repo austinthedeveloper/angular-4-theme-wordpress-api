@@ -46,7 +46,7 @@
       </div>
     </div>
   </mat-card>
-  <h2>User Feed {{feed.length}}</h2>
+  <h2>User Feed</h2>
   <mat-slide-toggle (change)="toggleFeed()" [checked]="feedToggle" [disabled]="refreshFeed">Live Feed (Last Updated: {{feedUpdated | amTimeAgo}})</mat-slide-toggle>
   <mat-card *ngFor="let game of feed | orderBy: order: true" class="game-card game-feed">
     <div class="card-border-vertical" [ngClass]="'console-' + ((game.ConsoleName | consoleId) || 'default')"></div>
