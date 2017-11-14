@@ -11,5 +11,5 @@ export const environment = {
   nodeServer: 'http://localhost:8080/api/',
   socketServer: 'http://localhost:8080',
   WORDPRESS_URL: `${wp}/wp-json/wp/v2`,
-  WORDPRESS_CONTACT_URL: `${wp}/wp-json/contact-form-7/v1`
+  WORDPRESS_CONTACT_URL: `${wp}/wp-json/contact-form-7/v2`
 };
