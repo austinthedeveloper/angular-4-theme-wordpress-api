@@ -1,17 +1,20 @@
 @import '~scss/variables';
 @import '~scss/mixins';
-$card-height: 300px;
+$card-height: 340px;
+$logo-width: 150px;
 
 .card {
 	width: 95%;
 	margin: auto auto 25px;
-  min-height: $card-height;
+  height: $card-height;
   padding: 0;
   border: 1px solid #CCC;
 	.logo {
-		width: 150px;
+    width: $logo-width;
+    height: 100%;
 		text-align: center;
-		padding: 25px 15px 15px;
+    padding: 25px 15px 15px;
+    float: left;
 		img {
 			width: auto;
 			margin: auto;
@@ -21,8 +24,9 @@ $card-height: 300px;
 		padding: 15px;
 	}
 	.card-content {
-    max-height: 550px;
     padding: 0;
+    width: calc(100% - #{$logo-width});
+    overflow: auto;
 	}
 	.card-title {
     position: relative;
@@ -37,8 +41,8 @@ $card-height: 300px;
 	.card-details {
 		font-size: 15px;
     padding: 8px;
-    max-height: 350px;
-    overflow-y: auto;
+    // max-height: 350px;
+    // overflow-y: auto;
 		ul {
       padding-left: 20px;
 		}

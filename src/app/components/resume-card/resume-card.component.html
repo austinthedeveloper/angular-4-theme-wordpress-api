@@ -1,5 +1,5 @@
 <div class="card row no-gutter" *ngIf="data">
-  <div class="logo col-4" [style.background]="data.acf.color">
+  <div class="logo" [style.background]="data.acf.color">
     <a [attr.href]="data.acf.site || '#'" *ngIf="data.better_featured_image">
       <img [src]="data.better_featured_image.source_url" [attr.alt]="data.title.rendered">
     </a>
