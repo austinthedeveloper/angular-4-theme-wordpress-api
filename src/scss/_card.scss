@@ -9,8 +9,10 @@
   }
   .card-header {
     border-bottom : $base-border;
+    background: $white;
     .card-title {
       font-weight: 300;
+      margin-bottom: 0;
     }
   }
   .card-body {

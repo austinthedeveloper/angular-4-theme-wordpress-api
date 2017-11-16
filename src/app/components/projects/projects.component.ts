@@ -21,7 +21,6 @@ export class ProjectsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('projects', this.projects);
   }
 
 }
