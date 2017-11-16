@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
   projects: any[] = this.route.snapshot.data['detail'];
 
+
   projectUrl = 'src/app/components/projects/';
   files = [
     `${this.projectUrl}projects.component.ts`,
@@ -20,6 +21,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log('projects', this.projects);
   }
 
 }

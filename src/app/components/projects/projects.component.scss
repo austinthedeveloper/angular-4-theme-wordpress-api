@@ -3,10 +3,16 @@
 }
 .mat-headline {
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 32px;
 }
 .mat-subhead {
-  padding-top: 12px;
-  text-align: right;
+  display: block;
+  font-size: 14px;
+  text-align: right !important;
+
+}
+
+.mat-card-image {
+  max-width: inherit;
 }
